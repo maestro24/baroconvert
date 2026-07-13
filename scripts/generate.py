@@ -82,6 +82,14 @@ def shell(*, title, desc, canonical, depth, body, jsonld=None, seo_html=""):
 <html lang="ko">
 <head>
 <meta charset="utf-8" />
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2P73L29BH7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', 'G-2P73L29BH7');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{title}</title>
 <meta name="description" content="{desc}" />
