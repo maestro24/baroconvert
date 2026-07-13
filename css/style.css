@@ -1,22 +1,13 @@
-/* 바로변환 — 공용 디자인 시스템 */
+/* 바로변환 — 공용 디자인 시스템 (라이트 전용) */
 :root {
-  --bg: #0f1214;
-  --bg-card: #171c1f;
-  --bg-elev: #20282c;
-  --text: #eef3f4;
-  --text-dim: #94a3a8;
-  --border: #2a3439;
-  --accent: #16a394;
-  --radius: 14px;
-  --shadow: rgba(0, 0, 0, 0.4);
-}
-:root[data-theme='light'] {
   --bg: #f6f9f9;
   --bg-card: #ffffff;
   --bg-elev: #eaf1f0;
   --text: #14181a;
   --text-dim: #5c6b6e;
   --border: #d9e3e2;
+  --accent: #16a394;
+  --radius: 14px;
   --shadow: rgba(16, 40, 40, 0.1);
 }
 

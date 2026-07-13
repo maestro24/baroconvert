@@ -11,8 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://maestro24.github.io/baroconvert/convert/m-to-cm/" />
 <meta property="og:locale" content="ko_KR" />
-<meta name="theme-color" content="#0f1214" media="(prefers-color-scheme: dark)" />
-<meta name="theme-color" content="#f6f9f9" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#f6f9f9" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%231FBFAE'/><stop offset='1' stop-color='%23108577'/></linearGradient></defs><rect width='100' height='100' rx='18' fill='url(%23g)'/><path d='M28 38h28m0 0l-9-9m9 9l-9 9' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M72 62H44m0 0l9-9m-9 9l9 9' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round' opacity='.85'/></svg>" />
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "1미터는 몇 센티미터인가요?", "acceptedAnswer": {"@type": "Answer", "text": "1미터(m)는 100센티미터(cm)입니다."}}, {"@type": "Question", "name": "미터를 센티미터로 바꾸는 공식은?", "acceptedAnswer": {"@type": "Answer", "text": "미터 값에 100을(를) 곱하면 센티미터 값이 됩니다."}}]}</script>
 <link rel="stylesheet" href="../../css/style.css" />
@@ -21,7 +20,6 @@
 <div id="app">
 <header class="header">
   <a class="brand" href="../../index.html">🔁 바로변환</a>
-  <nav class="nav"><button class="icon-btn" id="btn-theme" aria-label="테마 전환">☾</button></nav>
 </header>
 <main class="main">
 <nav class="crumb"><a href="../../index.html">홈</a> › <a href="../../c/length/index.html">길이</a> › 미터 → 센티미터</nav>
@@ -58,10 +56,6 @@
   <span>계산 결과는 참고용입니다.</span>
 </footer>
 </div>
-<script type="module">
-import { initTheme } from '../../js/common.js';
-initTheme();
-</script>
 <script type="module">
 import { initConverter } from '../../js/app.js';
 initConverter('m', 'cm');

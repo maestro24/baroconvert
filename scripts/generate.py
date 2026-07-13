@@ -54,8 +54,7 @@ def shell(*, title, desc, canonical, depth, body, jsonld=None, seo_html=""):
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{canonical}" />
 <meta property="og:locale" content="ko_KR" />
-<meta name="theme-color" content="#0f1214" media="(prefers-color-scheme: dark)" />
-<meta name="theme-color" content="#f6f9f9" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#f6f9f9" />
 <link rel="icon" href="{FAVICON}" />
 {ld}
 <link rel="stylesheet" href="{p}css/style.css" />
@@ -64,7 +63,6 @@ def shell(*, title, desc, canonical, depth, body, jsonld=None, seo_html=""):
 <div id="app">
 <header class="header">
   <a class="brand" href="{p}index.html">🔁 바로변환</a>
-  <nav class="nav"><button class="icon-btn" id="btn-theme" aria-label="테마 전환">☾</button></nav>
 </header>
 <main class="main">
 {body}
@@ -76,10 +74,6 @@ def shell(*, title, desc, canonical, depth, body, jsonld=None, seo_html=""):
   <span>계산 결과는 참고용입니다.</span>
 </footer>
 </div>
-<script type="module">
-import {{ initTheme }} from '{p}js/common.js';
-initTheme();
-</script>
 </body>
 </html>"""
 
