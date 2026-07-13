@@ -169,10 +169,10 @@ h1.page-title { font-size: 1.3rem; font-weight: 900; line-height: 1.35; }
 }
 
 /* ── 쿠팡 파트너스 슬롯 ── */
-.promo { border: 1px solid var(--border); background: var(--bg-card); border-radius: 12px; padding: 14px 16px; }
+.promo { margin: 16px 0; text-align: center; }
 .promo-label { font-size: 0.68rem; color: var(--text-dim); font-weight: 800; letter-spacing: 0.05em; }
 .promo a { font-weight: 800; display: inline-block; margin: 4px 0; }
-.promo-disclosure { font-size: 0.72rem; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+.promo-disclosure { font-size: 0.72rem; color: var(--text-dim); margin-top: 6px; line-height: 1.5; text-align: center; }
 [hidden] { display: none !important; }
 .coupang-wrap { display: flex; justify-content: center; margin: 8px 0; min-height: 140px; max-width: 100%; overflow-x: hidden; }
 
