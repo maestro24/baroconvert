@@ -1,0 +1,113 @@
+{
+  "categories": {
+    "length": {
+      "nameKo": "길이",
+      "base": "m",
+      "units": {
+        "mm": { "nameKo": "밀리미터", "symbol": "mm", "factor": 0.001, "aliases": ["밀리", "미리", "밀리미터"] },
+        "cm": { "nameKo": "센티미터", "symbol": "cm", "factor": 0.01, "aliases": ["센치", "센티", "센티미터"] },
+        "m": { "nameKo": "미터", "symbol": "m", "factor": 1, "aliases": ["미터", "메타"] },
+        "km": { "nameKo": "킬로미터", "symbol": "km", "factor": 1000, "aliases": ["킬로", "키로", "킬로미터"] },
+        "in": { "nameKo": "인치", "symbol": "in", "factor": 0.0254, "aliases": ["인치", "인지"] },
+        "ft": { "nameKo": "피트", "symbol": "ft", "factor": 0.3048, "aliases": ["피트", "피이트", "푸트"] },
+        "yd": { "nameKo": "야드", "symbol": "yd", "factor": 0.9144, "aliases": ["야드", "야아드"] },
+        "mi": { "nameKo": "마일", "symbol": "mi", "factor": 1609.344, "aliases": ["마일"] }
+      }
+    },
+    "weight": {
+      "nameKo": "무게",
+      "base": "kg",
+      "units": {
+        "mg": { "nameKo": "밀리그램", "symbol": "mg", "factor": 0.000001, "aliases": ["밀리그램", "미리그램"] },
+        "g": { "nameKo": "그램", "symbol": "g", "factor": 0.001, "aliases": ["그램", "그람"] },
+        "kg": { "nameKo": "킬로그램", "symbol": "kg", "factor": 1, "aliases": ["킬로그램", "킬로", "키로"] },
+        "t": { "nameKo": "톤", "symbol": "t", "factor": 1000, "aliases": ["톤"] },
+        "lb": { "nameKo": "파운드", "symbol": "lb", "factor": 0.45359237, "aliases": ["파운드", "파운즈", "폰드"] },
+        "oz": { "nameKo": "온스", "symbol": "oz", "factor": 0.028349523125, "aliases": ["온스", "오운스"] },
+        "geun": { "nameKo": "근", "symbol": "근", "factor": 0.6, "aliases": ["근", "한근"] },
+        "don": { "nameKo": "돈", "symbol": "돈", "factor": 0.00375, "aliases": ["돈", "돈쭝"] },
+        "nyang": { "nameKo": "냥", "symbol": "냥", "factor": 0.0375, "aliases": ["냥", "냥쭝"] }
+      }
+    },
+    "temperature": {
+      "nameKo": "온도",
+      "base": "c",
+      "units": {
+        "c": { "nameKo": "섭씨", "symbol": "°C", "factor": 1, "aliases": ["섭씨", "도씨"] },
+        "f": { "nameKo": "화씨", "symbol": "°F", "affine": { "a": 0.5555555555555556, "b": -17.77777777777778 }, "aliases": ["화씨"] },
+        "k": { "nameKo": "켈빈", "symbol": "K", "affine": { "a": 1, "b": -273.15 }, "aliases": ["켈빈", "절대온도"] }
+      }
+    },
+    "area": {
+      "nameKo": "넓이",
+      "base": "m2",
+      "units": {
+        "cm2": { "nameKo": "제곱센티미터", "symbol": "cm²", "factor": 0.0001, "aliases": ["제곱센티", "평방센티"] },
+        "m2": { "nameKo": "제곱미터", "symbol": "m²", "factor": 1, "aliases": ["제곱미터", "평방미터", "헤베"] },
+        "km2": { "nameKo": "제곱킬로미터", "symbol": "km²", "factor": 1000000, "aliases": ["제곱킬로미터", "평방킬로미터"] },
+        "ft2": { "nameKo": "제곱피트", "symbol": "ft²", "factor": 0.09290304, "aliases": ["제곱피트", "평방피트", "스퀘어피트"] },
+        "pyeong": { "nameKo": "평", "symbol": "평", "factor": 3.305785, "aliases": ["평", "평수"] },
+        "ha": { "nameKo": "헥타르", "symbol": "ha", "factor": 10000, "aliases": ["헥타르", "헥타"] },
+        "acre": { "nameKo": "에이커", "symbol": "ac", "factor": 4046.8564224, "aliases": ["에이커"] }
+      }
+    },
+    "volume": {
+      "nameKo": "부피",
+      "base": "l",
+      "units": {
+        "ml": { "nameKo": "밀리리터", "symbol": "mL", "factor": 0.001, "aliases": ["밀리리터", "미리리터", "시시", "cc"] },
+        "l": { "nameKo": "리터", "symbol": "L", "factor": 1, "aliases": ["리터", "리타"] },
+        "m3": { "nameKo": "세제곱미터", "symbol": "m³", "factor": 1000, "aliases": ["세제곱미터", "입방미터", "루베"] },
+        "gal": { "nameKo": "갤런", "symbol": "gal", "factor": 3.785411784, "aliases": ["갤런", "갤론", "미국갤런"] },
+        "floz": { "nameKo": "액량온스", "symbol": "fl oz", "factor": 0.0295735295625, "aliases": ["액량온스", "온스", "플루이드온스"] },
+        "cup": { "nameKo": "컵", "symbol": "컵", "factor": 0.24, "aliases": ["컵", "계량컵"] },
+        "tbsp": { "nameKo": "큰술", "symbol": "큰술", "factor": 0.015, "aliases": ["큰술", "밥숟가락", "테이블스푼", "T"] },
+        "tsp": { "nameKo": "작은술", "symbol": "작은술", "factor": 0.005, "aliases": ["작은술", "티스푼", "t"] }
+      }
+    }
+  },
+  "pairs": [
+    { "from": "ft", "to": "cm", "values": [1, 2, 3, 4, 5, 5.2, 5.4, 5.5, 5.6, 5.8, 6, 6.5] },
+    { "from": "cm", "to": "ft", "values": [150, 155, 160, 165, 170, 175, 180, 185, 190, 200] },
+    { "from": "in", "to": "cm", "values": [1, 5, 10, 15, 24, 27, 32, 55, 65, 75, 100] },
+    { "from": "cm", "to": "in", "values": [1, 10, 20, 30, 40, 50, 60, 70, 80, 100] },
+    { "from": "in", "to": "mm", "values": [0.5, 1, 2, 3, 4, 5, 6, 8, 10] },
+    { "from": "mi", "to": "km", "values": [1, 3, 5, 10, 26.2, 50, 100, 200, 500] },
+    { "from": "km", "to": "mi", "values": [1, 5, 10, 21.0975, 42.195, 50, 100, 200] },
+    { "from": "yd", "to": "m", "values": [1, 5, 10, 50, 100, 150, 200, 300] },
+    { "from": "m", "to": "yd", "values": [1, 10, 50, 100, 200, 400, 500, 1000] },
+    { "from": "km", "to": "m", "values": [0.5, 1, 1.5, 2, 3, 5, 10, 42.195] },
+    { "from": "m", "to": "cm", "values": [0.5, 1, 1.5, 1.6, 1.7, 1.75, 1.8, 2] },
+    { "from": "mm", "to": "cm", "values": [1, 5, 10, 25, 50, 100, 150, 200] },
+    { "from": "oz", "to": "g", "values": [1, 2, 3, 4, 5, 8, 10, 12, 16, 32] },
+    { "from": "g", "to": "oz", "values": [1, 10, 50, 100, 200, 250, 500, 1000] },
+    { "from": "lb", "to": "kg", "values": [1, 2, 3, 5, 10, 20, 44, 50, 100, 110] },
+    { "from": "kg", "to": "lb", "values": [1, 5, 10, 20, 30, 50, 60, 70, 80, 100] },
+    { "from": "geun", "to": "g", "values": [0.5, 1, 1.5, 2, 3, 4, 5, 10] },
+    { "from": "g", "to": "geun", "values": [100, 200, 300, 400, 500, 600, 1000, 1200] },
+    { "from": "don", "to": "g", "values": [0.5, 1, 2, 3, 5, 10, 20, 100] },
+    { "from": "g", "to": "don", "values": [1, 3.75, 10, 18.75, 37.5, 50, 100, 375] },
+    { "from": "nyang", "to": "g", "values": [0.5, 1, 2, 3, 5, 10, 20, 100] },
+    { "from": "kg", "to": "g", "values": [0.1, 0.5, 1, 1.5, 2, 3, 5, 10] },
+    { "from": "g", "to": "kg", "values": [100, 250, 500, 750, 1000, 1500, 2000, 5000] },
+    { "from": "f", "to": "c", "values": [0, 32, 50, 68, 70, 86, 98.6, 100, 104, 212] },
+    { "from": "c", "to": "f", "values": [-10, 0, 10, 20, 25, 30, 36.5, 37, 38, 40, 100] },
+    { "from": "c", "to": "k", "values": [-40, -20, 0, 10, 20, 25, 37, 100] },
+    { "from": "pyeong", "to": "m2", "values": [1, 5, 10, 15, 18, 20, 24, 25, 30, 32, 34, 40] },
+    { "from": "m2", "to": "pyeong", "values": [10, 20, 30, 40, 59, 60, 74, 84, 85, 100, 114] },
+    { "from": "acre", "to": "m2", "values": [0.5, 1, 2, 3, 5, 10, 50, 100] },
+    { "from": "m2", "to": "acre", "values": [100, 500, 1000, 3000, 5000, 10000, 50000, 100000] },
+    { "from": "ha", "to": "m2", "values": [0.1, 0.5, 1, 2, 3, 5, 10, 100] },
+    { "from": "ft2", "to": "m2", "values": [100, 300, 500, 700, 1000, 1500, 2000, 3000] },
+    { "from": "gal", "to": "l", "values": [1, 2, 3, 5, 10, 15, 20, 50] },
+    { "from": "l", "to": "gal", "values": [1, 5, 10, 20, 30, 50, 60, 100] },
+    { "from": "cup", "to": "ml", "values": [0.25, 0.5, 1, 1.5, 2, 3, 4, 5] },
+    { "from": "ml", "to": "cup", "values": [50, 100, 150, 200, 240, 250, 300, 500] },
+    { "from": "tbsp", "to": "ml", "values": [0.5, 1, 1.5, 2, 3, 4, 5, 10] },
+    { "from": "ml", "to": "tbsp", "values": [5, 10, 15, 20, 30, 45, 50, 100] },
+    { "from": "tsp", "to": "ml", "values": [0.5, 1, 1.5, 2, 3, 4, 5, 10] },
+    { "from": "ml", "to": "tsp", "values": [1, 2, 3, 5, 10, 15, 20, 30] },
+    { "from": "floz", "to": "ml", "values": [1, 2, 4, 8, 12, 16, 20, 32] },
+    { "from": "ml", "to": "floz", "values": [30, 50, 100, 200, 250, 330, 500, 750] }
+  ]
+}

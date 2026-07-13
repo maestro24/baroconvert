@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>섭씨 켈빈 변환 — °C to K 계산기 | 바로변환</title>
+<meta name="description" content="섭씨(°C)를 켈빈(K)로 즉시 변환. 1°C = 274.15K. 자주 찾는 값 변환표와 공식까지." />
+<link rel="canonical" href="https://maestro24.github.io/baroconvert/convert/c-to-k/" />
+<meta property="og:title" content="섭씨 켈빈 변환 — °C to K 계산기 | 바로변환" />
+<meta property="og:description" content="섭씨(°C)를 켈빈(K)로 즉시 변환. 1°C = 274.15K. 자주 찾는 값 변환표와 공식까지." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://maestro24.github.io/baroconvert/convert/c-to-k/" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="theme-color" content="#0f1214" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#f6f9f9" media="(prefers-color-scheme: light)" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%231FBFAE'/><stop offset='1' stop-color='%23108577'/></linearGradient></defs><rect width='100' height='100' rx='18' fill='url(%23g)'/><path d='M28 38h28m0 0l-9-9m9 9l-9 9' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M72 62H44m0 0l9-9m-9 9l9 9' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round' opacity='.85'/></svg>" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "1섭씨는 몇 켈빈인가요?", "acceptedAnswer": {"@type": "Answer", "text": "1섭씨(°C)는 274.15켈빈(K)입니다."}}, {"@type": "Question", "name": "섭씨를 켈빈로 바꾸는 공식은?", "acceptedAnswer": {"@type": "Answer", "text": "섭씨 = (화씨 − 32) × 5/9, 화씨 = 섭씨 × 9/5 + 32 입니다."}}]}</script>
+<link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+<div id="app">
+<header class="header">
+  <a class="brand" href="../../index.html">🔁 바로변환</a>
+  <nav class="nav"><button class="icon-btn" id="btn-theme" aria-label="테마 전환">☾</button></nav>
+</header>
+<main class="main">
+<nav class="crumb"><a href="../../index.html">홈</a> › <a href="../../c/temperature/index.html">온도</a> › 섭씨 → 켈빈</nav>
+<div>
+  <h1 class="page-title">섭씨(°C) → 켈빈(K) 변환기</h1>
+  <p class="page-desc">숫자를 입력하면 바로 변환돼요. 표에서 자주 찾는 값도 확인하세요.</p>
+</div>
+<div class="card conv" data-from="c" data-to="k" id="converter">
+  <div class="conv-row">
+    <div class="conv-cell"><label>섭씨 (°C)</label><input type="number" id="in-a" value="1" inputmode="decimal" /></div>
+    <button class="swap-btn" id="btn-swap" aria-label="방향 바꾸기">⇄</button>
+    <div class="conv-cell"><label>켈빈 (K)</label><input type="number" id="in-b" inputmode="decimal" /></div>
+  </div>
+  <div class="formula">온도 변환: °F = °C × 9/5 + 32</div>
+</div>
+<div class="card">
+  <h2 style="font-size:1rem;margin-bottom:10px">섭씨 → 켈빈 변환표</h2>
+  <table class="tbl"><thead><tr><th>섭씨</th><th>켈빈</th></tr></thead><tbody>
+  <tr><td><a href="-40/index.html">-40 °C</a></td><td>233.15 K</td></tr><tr><td><a href="-20/index.html">-20 °C</a></td><td>253.15 K</td></tr><tr><td><a href="0/index.html">0 °C</a></td><td>273.15 K</td></tr><tr><td><a href="10/index.html">10 °C</a></td><td>283.15 K</td></tr><tr><td><a href="20/index.html">20 °C</a></td><td>293.15 K</td></tr><tr><td><a href="25/index.html">25 °C</a></td><td>298.15 K</td></tr><tr><td><a href="37/index.html">37 °C</a></td><td>310.15 K</td></tr><tr><td><a href="100/index.html">100 °C</a></td><td>373.15 K</td></tr>
+  </tbody></table>
+</div>
+<div class="card">
+  <h2 style="font-size:1rem;margin-bottom:10px">관련 변환</h2>
+  <div class="rel-grid"><a class="rel-link" href="../f-to-c/index.html">화씨 → 섭씨</a><a class="rel-link" href="../c-to-f/index.html">섭씨 → 화씨</a></div>
+</div>
+</main>
+<section class="seo-content">
+<h2>섭씨에서 켈빈로 어떻게 바꾸나요?</h2>
+<p>화씨(°F)와 섭씨(°C)는 곱셈만으로 바꿀 수 없는 단위입니다. 섭씨 = (화씨 − 32) × 5/9 공식을 사용하며, 예를 들어 화씨 100도는 섭씨 약 37.8도입니다. 위 변환기는 입력 즉시 계산되며, 반대 방향 입력도 지원합니다.</p>
+</section>
+<footer class="footer">
+  <a href="../../index.html">홈</a>
+  <a href="../../fx/index.html">환율</a>
+  <span>계산 결과는 참고용입니다.</span>
+</footer>
+</div>
+<script type="module">
+import { initTheme } from '../../js/common.js';
+initTheme();
+</script>
+<script type="module">
+import { initConverter } from '../../js/app.js';
+initConverter('c', 'k');
+</script>
+</body>
+</html>

@@ -1,0 +1,2207 @@
+{
+ "tolerance": 1e-09,
+ "combos": [
+  {
+   "from": "ft",
+   "to": "cm",
+   "value": 1,
+   "expected": 30.48
+  },
+  {
+   "from": "ft",
+   "to": "cm",
+   "value": 2,
+   "expected": 60.96
+  },
+  {
+   "from": "ft",
+   "to": "cm",
+   "value": 3,
+   "expected": 91.44000000000001
+  },
+  {
+   "from": "ft",
+   "to": "cm",
+   "value": 4,
+   "expected": 121.92
+  },
+  {
+   "from": "ft",
+   "to": "cm",
+   "value": 5,
+   "expected": 152.4
+  },
+  {
+   "from": "ft",
+   "to": "cm",
+   "value": 5.2,
+   "expected": 158.496
+  },
+  {
+   "from": "ft",
+   "to": "cm",
+   "value": 5.4,
+   "expected": 164.592
+  },
+  {
+   "from": "ft",
+   "to": "cm",
+   "value": 5.5,
+   "expected": 167.64000000000001
+  },
+  {
+   "from": "ft",
+   "to": "cm",
+   "value": 5.6,
+   "expected": 170.688
+  },
+  {
+   "from": "ft",
+   "to": "cm",
+   "value": 5.8,
+   "expected": 176.784
+  },
+  {
+   "from": "ft",
+   "to": "cm",
+   "value": 6,
+   "expected": 182.88000000000002
+  },
+  {
+   "from": "ft",
+   "to": "cm",
+   "value": 6.5,
+   "expected": 198.12
+  },
+  {
+   "from": "cm",
+   "to": "ft",
+   "value": 150,
+   "expected": 4.921259842519685
+  },
+  {
+   "from": "cm",
+   "to": "ft",
+   "value": 155,
+   "expected": 5.085301837270341
+  },
+  {
+   "from": "cm",
+   "to": "ft",
+   "value": 160,
+   "expected": 5.2493438320209975
+  },
+  {
+   "from": "cm",
+   "to": "ft",
+   "value": 165,
+   "expected": 5.413385826771654
+  },
+  {
+   "from": "cm",
+   "to": "ft",
+   "value": 170,
+   "expected": 5.577427821522309
+  },
+  {
+   "from": "cm",
+   "to": "ft",
+   "value": 175,
+   "expected": 5.741469816272965
+  },
+  {
+   "from": "cm",
+   "to": "ft",
+   "value": 180,
+   "expected": 5.905511811023622
+  },
+  {
+   "from": "cm",
+   "to": "ft",
+   "value": 185,
+   "expected": 6.069553805774278
+  },
+  {
+   "from": "cm",
+   "to": "ft",
+   "value": 190,
+   "expected": 6.233595800524935
+  },
+  {
+   "from": "cm",
+   "to": "ft",
+   "value": 200,
+   "expected": 6.561679790026246
+  },
+  {
+   "from": "in",
+   "to": "cm",
+   "value": 1,
+   "expected": 2.54
+  },
+  {
+   "from": "in",
+   "to": "cm",
+   "value": 5,
+   "expected": 12.7
+  },
+  {
+   "from": "in",
+   "to": "cm",
+   "value": 10,
+   "expected": 25.4
+  },
+  {
+   "from": "in",
+   "to": "cm",
+   "value": 15,
+   "expected": 38.1
+  },
+  {
+   "from": "in",
+   "to": "cm",
+   "value": 24,
+   "expected": 60.959999999999994
+  },
+  {
+   "from": "in",
+   "to": "cm",
+   "value": 27,
+   "expected": 68.58
+  },
+  {
+   "from": "in",
+   "to": "cm",
+   "value": 32,
+   "expected": 81.28
+  },
+  {
+   "from": "in",
+   "to": "cm",
+   "value": 55,
+   "expected": 139.7
+  },
+  {
+   "from": "in",
+   "to": "cm",
+   "value": 65,
+   "expected": 165.1
+  },
+  {
+   "from": "in",
+   "to": "cm",
+   "value": 75,
+   "expected": 190.5
+  },
+  {
+   "from": "in",
+   "to": "cm",
+   "value": 100,
+   "expected": 254.0
+  },
+  {
+   "from": "cm",
+   "to": "in",
+   "value": 1,
+   "expected": 0.3937007874015748
+  },
+  {
+   "from": "cm",
+   "to": "in",
+   "value": 10,
+   "expected": 3.9370078740157486
+  },
+  {
+   "from": "cm",
+   "to": "in",
+   "value": 20,
+   "expected": 7.874015748031497
+  },
+  {
+   "from": "cm",
+   "to": "in",
+   "value": 30,
+   "expected": 11.811023622047244
+  },
+  {
+   "from": "cm",
+   "to": "in",
+   "value": 40,
+   "expected": 15.748031496062994
+  },
+  {
+   "from": "cm",
+   "to": "in",
+   "value": 50,
+   "expected": 19.68503937007874
+  },
+  {
+   "from": "cm",
+   "to": "in",
+   "value": 60,
+   "expected": 23.62204724409449
+  },
+  {
+   "from": "cm",
+   "to": "in",
+   "value": 70,
+   "expected": 27.55905511811024
+  },
+  {
+   "from": "cm",
+   "to": "in",
+   "value": 80,
+   "expected": 31.49606299212599
+  },
+  {
+   "from": "cm",
+   "to": "in",
+   "value": 100,
+   "expected": 39.37007874015748
+  },
+  {
+   "from": "in",
+   "to": "mm",
+   "value": 0.5,
+   "expected": 12.7
+  },
+  {
+   "from": "in",
+   "to": "mm",
+   "value": 1,
+   "expected": 25.4
+  },
+  {
+   "from": "in",
+   "to": "mm",
+   "value": 2,
+   "expected": 50.8
+  },
+  {
+   "from": "in",
+   "to": "mm",
+   "value": 3,
+   "expected": 76.19999999999999
+  },
+  {
+   "from": "in",
+   "to": "mm",
+   "value": 4,
+   "expected": 101.6
+  },
+  {
+   "from": "in",
+   "to": "mm",
+   "value": 5,
+   "expected": 127.0
+  },
+  {
+   "from": "in",
+   "to": "mm",
+   "value": 6,
+   "expected": 152.39999999999998
+  },
+  {
+   "from": "in",
+   "to": "mm",
+   "value": 8,
+   "expected": 203.2
+  },
+  {
+   "from": "in",
+   "to": "mm",
+   "value": 10,
+   "expected": 254.0
+  },
+  {
+   "from": "mi",
+   "to": "km",
+   "value": 1,
+   "expected": 1.609344
+  },
+  {
+   "from": "mi",
+   "to": "km",
+   "value": 3,
+   "expected": 4.828032
+  },
+  {
+   "from": "mi",
+   "to": "km",
+   "value": 5,
+   "expected": 8.04672
+  },
+  {
+   "from": "mi",
+   "to": "km",
+   "value": 10,
+   "expected": 16.09344
+  },
+  {
+   "from": "mi",
+   "to": "km",
+   "value": 26.2,
+   "expected": 42.1648128
+  },
+  {
+   "from": "mi",
+   "to": "km",
+   "value": 50,
+   "expected": 80.46719999999999
+  },
+  {
+   "from": "mi",
+   "to": "km",
+   "value": 100,
+   "expected": 160.93439999999998
+  },
+  {
+   "from": "mi",
+   "to": "km",
+   "value": 200,
+   "expected": 321.86879999999996
+  },
+  {
+   "from": "mi",
+   "to": "km",
+   "value": 500,
+   "expected": 804.672
+  },
+  {
+   "from": "km",
+   "to": "mi",
+   "value": 1,
+   "expected": 0.621371192237334
+  },
+  {
+   "from": "km",
+   "to": "mi",
+   "value": 5,
+   "expected": 3.1068559611866697
+  },
+  {
+   "from": "km",
+   "to": "mi",
+   "value": 10,
+   "expected": 6.2137119223733395
+  },
+  {
+   "from": "km",
+   "to": "mi",
+   "value": 21.0975,
+   "expected": 13.109378728227153
+  },
+  {
+   "from": "km",
+   "to": "mi",
+   "value": 42.195,
+   "expected": 26.218757456454306
+  },
+  {
+   "from": "km",
+   "to": "mi",
+   "value": 50,
+   "expected": 31.068559611866696
+  },
+  {
+   "from": "km",
+   "to": "mi",
+   "value": 100,
+   "expected": 62.13711922373339
+  },
+  {
+   "from": "km",
+   "to": "mi",
+   "value": 200,
+   "expected": 124.27423844746679
+  },
+  {
+   "from": "yd",
+   "to": "m",
+   "value": 1,
+   "expected": 0.9144
+  },
+  {
+   "from": "yd",
+   "to": "m",
+   "value": 5,
+   "expected": 4.572
+  },
+  {
+   "from": "yd",
+   "to": "m",
+   "value": 10,
+   "expected": 9.144
+  },
+  {
+   "from": "yd",
+   "to": "m",
+   "value": 50,
+   "expected": 45.72
+  },
+  {
+   "from": "yd",
+   "to": "m",
+   "value": 100,
+   "expected": 91.44
+  },
+  {
+   "from": "yd",
+   "to": "m",
+   "value": 150,
+   "expected": 137.16
+  },
+  {
+   "from": "yd",
+   "to": "m",
+   "value": 200,
+   "expected": 182.88
+  },
+  {
+   "from": "yd",
+   "to": "m",
+   "value": 300,
+   "expected": 274.32
+  },
+  {
+   "from": "m",
+   "to": "yd",
+   "value": 1,
+   "expected": 1.0936132983377078
+  },
+  {
+   "from": "m",
+   "to": "yd",
+   "value": 10,
+   "expected": 10.936132983377078
+  },
+  {
+   "from": "m",
+   "to": "yd",
+   "value": 50,
+   "expected": 54.68066491688539
+  },
+  {
+   "from": "m",
+   "to": "yd",
+   "value": 100,
+   "expected": 109.36132983377078
+  },
+  {
+   "from": "m",
+   "to": "yd",
+   "value": 200,
+   "expected": 218.72265966754156
+  },
+  {
+   "from": "m",
+   "to": "yd",
+   "value": 400,
+   "expected": 437.4453193350831
+  },
+  {
+   "from": "m",
+   "to": "yd",
+   "value": 500,
+   "expected": 546.8066491688539
+  },
+  {
+   "from": "m",
+   "to": "yd",
+   "value": 1000,
+   "expected": 1093.6132983377079
+  },
+  {
+   "from": "km",
+   "to": "m",
+   "value": 0.5,
+   "expected": 500.0
+  },
+  {
+   "from": "km",
+   "to": "m",
+   "value": 1,
+   "expected": 1000.0
+  },
+  {
+   "from": "km",
+   "to": "m",
+   "value": 1.5,
+   "expected": 1500.0
+  },
+  {
+   "from": "km",
+   "to": "m",
+   "value": 2,
+   "expected": 2000.0
+  },
+  {
+   "from": "km",
+   "to": "m",
+   "value": 3,
+   "expected": 3000.0
+  },
+  {
+   "from": "km",
+   "to": "m",
+   "value": 5,
+   "expected": 5000.0
+  },
+  {
+   "from": "km",
+   "to": "m",
+   "value": 10,
+   "expected": 10000.0
+  },
+  {
+   "from": "km",
+   "to": "m",
+   "value": 42.195,
+   "expected": 42195.0
+  },
+  {
+   "from": "m",
+   "to": "cm",
+   "value": 0.5,
+   "expected": 50.0
+  },
+  {
+   "from": "m",
+   "to": "cm",
+   "value": 1,
+   "expected": 100.0
+  },
+  {
+   "from": "m",
+   "to": "cm",
+   "value": 1.5,
+   "expected": 150.0
+  },
+  {
+   "from": "m",
+   "to": "cm",
+   "value": 1.6,
+   "expected": 160.0
+  },
+  {
+   "from": "m",
+   "to": "cm",
+   "value": 1.7,
+   "expected": 170.0
+  },
+  {
+   "from": "m",
+   "to": "cm",
+   "value": 1.75,
+   "expected": 175.0
+  },
+  {
+   "from": "m",
+   "to": "cm",
+   "value": 1.8,
+   "expected": 180.0
+  },
+  {
+   "from": "m",
+   "to": "cm",
+   "value": 2,
+   "expected": 200.0
+  },
+  {
+   "from": "mm",
+   "to": "cm",
+   "value": 1,
+   "expected": 0.1
+  },
+  {
+   "from": "mm",
+   "to": "cm",
+   "value": 5,
+   "expected": 0.5
+  },
+  {
+   "from": "mm",
+   "to": "cm",
+   "value": 10,
+   "expected": 1.0
+  },
+  {
+   "from": "mm",
+   "to": "cm",
+   "value": 25,
+   "expected": 2.5
+  },
+  {
+   "from": "mm",
+   "to": "cm",
+   "value": 50,
+   "expected": 5.0
+  },
+  {
+   "from": "mm",
+   "to": "cm",
+   "value": 100,
+   "expected": 10.0
+  },
+  {
+   "from": "mm",
+   "to": "cm",
+   "value": 150,
+   "expected": 15.0
+  },
+  {
+   "from": "mm",
+   "to": "cm",
+   "value": 200,
+   "expected": 20.0
+  },
+  {
+   "from": "oz",
+   "to": "g",
+   "value": 1,
+   "expected": 28.349523125
+  },
+  {
+   "from": "oz",
+   "to": "g",
+   "value": 2,
+   "expected": 56.69904625
+  },
+  {
+   "from": "oz",
+   "to": "g",
+   "value": 3,
+   "expected": 85.048569375
+  },
+  {
+   "from": "oz",
+   "to": "g",
+   "value": 4,
+   "expected": 113.3980925
+  },
+  {
+   "from": "oz",
+   "to": "g",
+   "value": 5,
+   "expected": 141.747615625
+  },
+  {
+   "from": "oz",
+   "to": "g",
+   "value": 8,
+   "expected": 226.796185
+  },
+  {
+   "from": "oz",
+   "to": "g",
+   "value": 10,
+   "expected": 283.49523125
+  },
+  {
+   "from": "oz",
+   "to": "g",
+   "value": 12,
+   "expected": 340.1942775
+  },
+  {
+   "from": "oz",
+   "to": "g",
+   "value": 16,
+   "expected": 453.59237
+  },
+  {
+   "from": "oz",
+   "to": "g",
+   "value": 32,
+   "expected": 907.18474
+  },
+  {
+   "from": "g",
+   "to": "oz",
+   "value": 1,
+   "expected": 0.035273961949580414
+  },
+  {
+   "from": "g",
+   "to": "oz",
+   "value": 10,
+   "expected": 0.3527396194958041
+  },
+  {
+   "from": "g",
+   "to": "oz",
+   "value": 50,
+   "expected": 1.7636980974790206
+  },
+  {
+   "from": "g",
+   "to": "oz",
+   "value": 100,
+   "expected": 3.5273961949580412
+  },
+  {
+   "from": "g",
+   "to": "oz",
+   "value": 200,
+   "expected": 7.0547923899160825
+  },
+  {
+   "from": "g",
+   "to": "oz",
+   "value": 250,
+   "expected": 8.818490487395103
+  },
+  {
+   "from": "g",
+   "to": "oz",
+   "value": 500,
+   "expected": 17.636980974790205
+  },
+  {
+   "from": "g",
+   "to": "oz",
+   "value": 1000,
+   "expected": 35.27396194958041
+  },
+  {
+   "from": "lb",
+   "to": "kg",
+   "value": 1,
+   "expected": 0.45359237
+  },
+  {
+   "from": "lb",
+   "to": "kg",
+   "value": 2,
+   "expected": 0.90718474
+  },
+  {
+   "from": "lb",
+   "to": "kg",
+   "value": 3,
+   "expected": 1.3607771100000001
+  },
+  {
+   "from": "lb",
+   "to": "kg",
+   "value": 5,
+   "expected": 2.2679618500000003
+  },
+  {
+   "from": "lb",
+   "to": "kg",
+   "value": 10,
+   "expected": 4.535923700000001
+  },
+  {
+   "from": "lb",
+   "to": "kg",
+   "value": 20,
+   "expected": 9.071847400000001
+  },
+  {
+   "from": "lb",
+   "to": "kg",
+   "value": 44,
+   "expected": 19.958064280000002
+  },
+  {
+   "from": "lb",
+   "to": "kg",
+   "value": 50,
+   "expected": 22.6796185
+  },
+  {
+   "from": "lb",
+   "to": "kg",
+   "value": 100,
+   "expected": 45.359237
+  },
+  {
+   "from": "lb",
+   "to": "kg",
+   "value": 110,
+   "expected": 49.895160700000005
+  },
+  {
+   "from": "kg",
+   "to": "lb",
+   "value": 1,
+   "expected": 2.2046226218487757
+  },
+  {
+   "from": "kg",
+   "to": "lb",
+   "value": 5,
+   "expected": 11.023113109243878
+  },
+  {
+   "from": "kg",
+   "to": "lb",
+   "value": 10,
+   "expected": 22.046226218487757
+  },
+  {
+   "from": "kg",
+   "to": "lb",
+   "value": 20,
+   "expected": 44.09245243697551
+  },
+  {
+   "from": "kg",
+   "to": "lb",
+   "value": 30,
+   "expected": 66.13867865546327
+  },
+  {
+   "from": "kg",
+   "to": "lb",
+   "value": 50,
+   "expected": 110.23113109243879
+  },
+  {
+   "from": "kg",
+   "to": "lb",
+   "value": 60,
+   "expected": 132.27735731092653
+  },
+  {
+   "from": "kg",
+   "to": "lb",
+   "value": 70,
+   "expected": 154.3235835294143
+  },
+  {
+   "from": "kg",
+   "to": "lb",
+   "value": 80,
+   "expected": 176.36980974790205
+  },
+  {
+   "from": "kg",
+   "to": "lb",
+   "value": 100,
+   "expected": 220.46226218487757
+  },
+  {
+   "from": "geun",
+   "to": "g",
+   "value": 0.5,
+   "expected": 300.0
+  },
+  {
+   "from": "geun",
+   "to": "g",
+   "value": 1,
+   "expected": 600.0
+  },
+  {
+   "from": "geun",
+   "to": "g",
+   "value": 1.5,
+   "expected": 899.9999999999999
+  },
+  {
+   "from": "geun",
+   "to": "g",
+   "value": 2,
+   "expected": 1200.0
+  },
+  {
+   "from": "geun",
+   "to": "g",
+   "value": 3,
+   "expected": 1799.9999999999998
+  },
+  {
+   "from": "geun",
+   "to": "g",
+   "value": 4,
+   "expected": 2400.0
+  },
+  {
+   "from": "geun",
+   "to": "g",
+   "value": 5,
+   "expected": 3000.0
+  },
+  {
+   "from": "geun",
+   "to": "g",
+   "value": 10,
+   "expected": 6000.0
+  },
+  {
+   "from": "g",
+   "to": "geun",
+   "value": 100,
+   "expected": 0.16666666666666669
+  },
+  {
+   "from": "g",
+   "to": "geun",
+   "value": 200,
+   "expected": 0.33333333333333337
+  },
+  {
+   "from": "g",
+   "to": "geun",
+   "value": 300,
+   "expected": 0.5
+  },
+  {
+   "from": "g",
+   "to": "geun",
+   "value": 400,
+   "expected": 0.6666666666666667
+  },
+  {
+   "from": "g",
+   "to": "geun",
+   "value": 500,
+   "expected": 0.8333333333333334
+  },
+  {
+   "from": "g",
+   "to": "geun",
+   "value": 600,
+   "expected": 1.0
+  },
+  {
+   "from": "g",
+   "to": "geun",
+   "value": 1000,
+   "expected": 1.6666666666666667
+  },
+  {
+   "from": "g",
+   "to": "geun",
+   "value": 1200,
+   "expected": 2.0
+  },
+  {
+   "from": "don",
+   "to": "g",
+   "value": 0.5,
+   "expected": 1.875
+  },
+  {
+   "from": "don",
+   "to": "g",
+   "value": 1,
+   "expected": 3.75
+  },
+  {
+   "from": "don",
+   "to": "g",
+   "value": 2,
+   "expected": 7.5
+  },
+  {
+   "from": "don",
+   "to": "g",
+   "value": 3,
+   "expected": 11.25
+  },
+  {
+   "from": "don",
+   "to": "g",
+   "value": 5,
+   "expected": 18.75
+  },
+  {
+   "from": "don",
+   "to": "g",
+   "value": 10,
+   "expected": 37.5
+  },
+  {
+   "from": "don",
+   "to": "g",
+   "value": 20,
+   "expected": 75.0
+  },
+  {
+   "from": "don",
+   "to": "g",
+   "value": 100,
+   "expected": 375.0
+  },
+  {
+   "from": "g",
+   "to": "don",
+   "value": 1,
+   "expected": 0.26666666666666666
+  },
+  {
+   "from": "g",
+   "to": "don",
+   "value": 3.75,
+   "expected": 1.0
+  },
+  {
+   "from": "g",
+   "to": "don",
+   "value": 10,
+   "expected": 2.666666666666667
+  },
+  {
+   "from": "g",
+   "to": "don",
+   "value": 18.75,
+   "expected": 5.0
+  },
+  {
+   "from": "g",
+   "to": "don",
+   "value": 37.5,
+   "expected": 10.0
+  },
+  {
+   "from": "g",
+   "to": "don",
+   "value": 50,
+   "expected": 13.333333333333334
+  },
+  {
+   "from": "g",
+   "to": "don",
+   "value": 100,
+   "expected": 26.666666666666668
+  },
+  {
+   "from": "g",
+   "to": "don",
+   "value": 375,
+   "expected": 100.0
+  },
+  {
+   "from": "nyang",
+   "to": "g",
+   "value": 0.5,
+   "expected": 18.75
+  },
+  {
+   "from": "nyang",
+   "to": "g",
+   "value": 1,
+   "expected": 37.5
+  },
+  {
+   "from": "nyang",
+   "to": "g",
+   "value": 2,
+   "expected": 75.0
+  },
+  {
+   "from": "nyang",
+   "to": "g",
+   "value": 3,
+   "expected": 112.49999999999999
+  },
+  {
+   "from": "nyang",
+   "to": "g",
+   "value": 5,
+   "expected": 187.5
+  },
+  {
+   "from": "nyang",
+   "to": "g",
+   "value": 10,
+   "expected": 375.0
+  },
+  {
+   "from": "nyang",
+   "to": "g",
+   "value": 20,
+   "expected": 750.0
+  },
+  {
+   "from": "nyang",
+   "to": "g",
+   "value": 100,
+   "expected": 3750.0
+  },
+  {
+   "from": "kg",
+   "to": "g",
+   "value": 0.1,
+   "expected": 100.0
+  },
+  {
+   "from": "kg",
+   "to": "g",
+   "value": 0.5,
+   "expected": 500.0
+  },
+  {
+   "from": "kg",
+   "to": "g",
+   "value": 1,
+   "expected": 1000.0
+  },
+  {
+   "from": "kg",
+   "to": "g",
+   "value": 1.5,
+   "expected": 1500.0
+  },
+  {
+   "from": "kg",
+   "to": "g",
+   "value": 2,
+   "expected": 2000.0
+  },
+  {
+   "from": "kg",
+   "to": "g",
+   "value": 3,
+   "expected": 3000.0
+  },
+  {
+   "from": "kg",
+   "to": "g",
+   "value": 5,
+   "expected": 5000.0
+  },
+  {
+   "from": "kg",
+   "to": "g",
+   "value": 10,
+   "expected": 10000.0
+  },
+  {
+   "from": "g",
+   "to": "kg",
+   "value": 100,
+   "expected": 0.1
+  },
+  {
+   "from": "g",
+   "to": "kg",
+   "value": 250,
+   "expected": 0.25
+  },
+  {
+   "from": "g",
+   "to": "kg",
+   "value": 500,
+   "expected": 0.5
+  },
+  {
+   "from": "g",
+   "to": "kg",
+   "value": 750,
+   "expected": 0.75
+  },
+  {
+   "from": "g",
+   "to": "kg",
+   "value": 1000,
+   "expected": 1.0
+  },
+  {
+   "from": "g",
+   "to": "kg",
+   "value": 1500,
+   "expected": 1.5
+  },
+  {
+   "from": "g",
+   "to": "kg",
+   "value": 2000,
+   "expected": 2.0
+  },
+  {
+   "from": "g",
+   "to": "kg",
+   "value": 5000,
+   "expected": 5.0
+  },
+  {
+   "from": "f",
+   "to": "c",
+   "value": 0,
+   "expected": -17.77777777777778
+  },
+  {
+   "from": "f",
+   "to": "c",
+   "value": 32,
+   "expected": 0.0
+  },
+  {
+   "from": "f",
+   "to": "c",
+   "value": 50,
+   "expected": 10.0
+  },
+  {
+   "from": "f",
+   "to": "c",
+   "value": 68,
+   "expected": 20.0
+  },
+  {
+   "from": "f",
+   "to": "c",
+   "value": 70,
+   "expected": 21.111111111111114
+  },
+  {
+   "from": "f",
+   "to": "c",
+   "value": 86,
+   "expected": 30.0
+  },
+  {
+   "from": "f",
+   "to": "c",
+   "value": 98.6,
+   "expected": 37.0
+  },
+  {
+   "from": "f",
+   "to": "c",
+   "value": 100,
+   "expected": 37.77777777777778
+  },
+  {
+   "from": "f",
+   "to": "c",
+   "value": 104,
+   "expected": 40.0
+  },
+  {
+   "from": "f",
+   "to": "c",
+   "value": 212,
+   "expected": 100.0
+  },
+  {
+   "from": "c",
+   "to": "f",
+   "value": -10,
+   "expected": 14.0
+  },
+  {
+   "from": "c",
+   "to": "f",
+   "value": 0,
+   "expected": 32.0
+  },
+  {
+   "from": "c",
+   "to": "f",
+   "value": 10,
+   "expected": 50.0
+  },
+  {
+   "from": "c",
+   "to": "f",
+   "value": 20,
+   "expected": 68.0
+  },
+  {
+   "from": "c",
+   "to": "f",
+   "value": 25,
+   "expected": 77.0
+  },
+  {
+   "from": "c",
+   "to": "f",
+   "value": 30,
+   "expected": 86.0
+  },
+  {
+   "from": "c",
+   "to": "f",
+   "value": 36.5,
+   "expected": 97.7
+  },
+  {
+   "from": "c",
+   "to": "f",
+   "value": 37,
+   "expected": 98.6
+  },
+  {
+   "from": "c",
+   "to": "f",
+   "value": 38,
+   "expected": 100.39999999999999
+  },
+  {
+   "from": "c",
+   "to": "f",
+   "value": 40,
+   "expected": 104.0
+  },
+  {
+   "from": "c",
+   "to": "f",
+   "value": 100,
+   "expected": 211.99999999999997
+  },
+  {
+   "from": "c",
+   "to": "k",
+   "value": -40,
+   "expected": 233.14999999999998
+  },
+  {
+   "from": "c",
+   "to": "k",
+   "value": -20,
+   "expected": 253.14999999999998
+  },
+  {
+   "from": "c",
+   "to": "k",
+   "value": 0,
+   "expected": 273.15
+  },
+  {
+   "from": "c",
+   "to": "k",
+   "value": 10,
+   "expected": 283.15
+  },
+  {
+   "from": "c",
+   "to": "k",
+   "value": 20,
+   "expected": 293.15
+  },
+  {
+   "from": "c",
+   "to": "k",
+   "value": 25,
+   "expected": 298.15
+  },
+  {
+   "from": "c",
+   "to": "k",
+   "value": 37,
+   "expected": 310.15
+  },
+  {
+   "from": "c",
+   "to": "k",
+   "value": 100,
+   "expected": 373.15
+  },
+  {
+   "from": "pyeong",
+   "to": "m2",
+   "value": 1,
+   "expected": 3.305785
+  },
+  {
+   "from": "pyeong",
+   "to": "m2",
+   "value": 5,
+   "expected": 16.528925
+  },
+  {
+   "from": "pyeong",
+   "to": "m2",
+   "value": 10,
+   "expected": 33.05785
+  },
+  {
+   "from": "pyeong",
+   "to": "m2",
+   "value": 15,
+   "expected": 49.586775
+  },
+  {
+   "from": "pyeong",
+   "to": "m2",
+   "value": 18,
+   "expected": 59.50413
+  },
+  {
+   "from": "pyeong",
+   "to": "m2",
+   "value": 20,
+   "expected": 66.1157
+  },
+  {
+   "from": "pyeong",
+   "to": "m2",
+   "value": 24,
+   "expected": 79.33884
+  },
+  {
+   "from": "pyeong",
+   "to": "m2",
+   "value": 25,
+   "expected": 82.644625
+  },
+  {
+   "from": "pyeong",
+   "to": "m2",
+   "value": 30,
+   "expected": 99.17355
+  },
+  {
+   "from": "pyeong",
+   "to": "m2",
+   "value": 32,
+   "expected": 105.78512
+  },
+  {
+   "from": "pyeong",
+   "to": "m2",
+   "value": 34,
+   "expected": 112.39669
+  },
+  {
+   "from": "pyeong",
+   "to": "m2",
+   "value": 40,
+   "expected": 132.2314
+  },
+  {
+   "from": "m2",
+   "to": "pyeong",
+   "value": 10,
+   "expected": 3.025000113437504
+  },
+  {
+   "from": "m2",
+   "to": "pyeong",
+   "value": 20,
+   "expected": 6.050000226875008
+  },
+  {
+   "from": "m2",
+   "to": "pyeong",
+   "value": 30,
+   "expected": 9.075000340312512
+  },
+  {
+   "from": "m2",
+   "to": "pyeong",
+   "value": 40,
+   "expected": 12.100000453750017
+  },
+  {
+   "from": "m2",
+   "to": "pyeong",
+   "value": 59,
+   "expected": 17.847500669281274
+  },
+  {
+   "from": "m2",
+   "to": "pyeong",
+   "value": 60,
+   "expected": 18.150000680625023
+  },
+  {
+   "from": "m2",
+   "to": "pyeong",
+   "value": 74,
+   "expected": 22.38500083943753
+  },
+  {
+   "from": "m2",
+   "to": "pyeong",
+   "value": 84,
+   "expected": 25.410000952875034
+  },
+  {
+   "from": "m2",
+   "to": "pyeong",
+   "value": 85,
+   "expected": 25.712500964218783
+  },
+  {
+   "from": "m2",
+   "to": "pyeong",
+   "value": 100,
+   "expected": 30.25000113437504
+  },
+  {
+   "from": "m2",
+   "to": "pyeong",
+   "value": 114,
+   "expected": 34.485001293187544
+  },
+  {
+   "from": "acre",
+   "to": "m2",
+   "value": 0.5,
+   "expected": 2023.4282112
+  },
+  {
+   "from": "acre",
+   "to": "m2",
+   "value": 1,
+   "expected": 4046.8564224
+  },
+  {
+   "from": "acre",
+   "to": "m2",
+   "value": 2,
+   "expected": 8093.7128448
+  },
+  {
+   "from": "acre",
+   "to": "m2",
+   "value": 3,
+   "expected": 12140.5692672
+  },
+  {
+   "from": "acre",
+   "to": "m2",
+   "value": 5,
+   "expected": 20234.282112
+  },
+  {
+   "from": "acre",
+   "to": "m2",
+   "value": 10,
+   "expected": 40468.564224
+  },
+  {
+   "from": "acre",
+   "to": "m2",
+   "value": 50,
+   "expected": 202342.82112
+  },
+  {
+   "from": "acre",
+   "to": "m2",
+   "value": 100,
+   "expected": 404685.64224
+  },
+  {
+   "from": "m2",
+   "to": "acre",
+   "value": 100,
+   "expected": 0.024710538146716532
+  },
+  {
+   "from": "m2",
+   "to": "acre",
+   "value": 500,
+   "expected": 0.12355269073358266
+  },
+  {
+   "from": "m2",
+   "to": "acre",
+   "value": 1000,
+   "expected": 0.24710538146716532
+  },
+  {
+   "from": "m2",
+   "to": "acre",
+   "value": 3000,
+   "expected": 0.741316144401496
+  },
+  {
+   "from": "m2",
+   "to": "acre",
+   "value": 5000,
+   "expected": 1.2355269073358266
+  },
+  {
+   "from": "m2",
+   "to": "acre",
+   "value": 10000,
+   "expected": 2.471053814671653
+  },
+  {
+   "from": "m2",
+   "to": "acre",
+   "value": 50000,
+   "expected": 12.355269073358267
+  },
+  {
+   "from": "m2",
+   "to": "acre",
+   "value": 100000,
+   "expected": 24.710538146716534
+  },
+  {
+   "from": "ha",
+   "to": "m2",
+   "value": 0.1,
+   "expected": 1000.0
+  },
+  {
+   "from": "ha",
+   "to": "m2",
+   "value": 0.5,
+   "expected": 5000.0
+  },
+  {
+   "from": "ha",
+   "to": "m2",
+   "value": 1,
+   "expected": 10000.0
+  },
+  {
+   "from": "ha",
+   "to": "m2",
+   "value": 2,
+   "expected": 20000.0
+  },
+  {
+   "from": "ha",
+   "to": "m2",
+   "value": 3,
+   "expected": 30000.0
+  },
+  {
+   "from": "ha",
+   "to": "m2",
+   "value": 5,
+   "expected": 50000.0
+  },
+  {
+   "from": "ha",
+   "to": "m2",
+   "value": 10,
+   "expected": 100000.0
+  },
+  {
+   "from": "ha",
+   "to": "m2",
+   "value": 100,
+   "expected": 1000000.0
+  },
+  {
+   "from": "ft2",
+   "to": "m2",
+   "value": 100,
+   "expected": 9.290304
+  },
+  {
+   "from": "ft2",
+   "to": "m2",
+   "value": 300,
+   "expected": 27.870912
+  },
+  {
+   "from": "ft2",
+   "to": "m2",
+   "value": 500,
+   "expected": 46.45152
+  },
+  {
+   "from": "ft2",
+   "to": "m2",
+   "value": 700,
+   "expected": 65.032128
+  },
+  {
+   "from": "ft2",
+   "to": "m2",
+   "value": 1000,
+   "expected": 92.90304
+  },
+  {
+   "from": "ft2",
+   "to": "m2",
+   "value": 1500,
+   "expected": 139.35456000000002
+  },
+  {
+   "from": "ft2",
+   "to": "m2",
+   "value": 2000,
+   "expected": 185.80608
+  },
+  {
+   "from": "ft2",
+   "to": "m2",
+   "value": 3000,
+   "expected": 278.70912000000004
+  },
+  {
+   "from": "gal",
+   "to": "l",
+   "value": 1,
+   "expected": 3.785411784
+  },
+  {
+   "from": "gal",
+   "to": "l",
+   "value": 2,
+   "expected": 7.570823568
+  },
+  {
+   "from": "gal",
+   "to": "l",
+   "value": 3,
+   "expected": 11.356235351999999
+  },
+  {
+   "from": "gal",
+   "to": "l",
+   "value": 5,
+   "expected": 18.92705892
+  },
+  {
+   "from": "gal",
+   "to": "l",
+   "value": 10,
+   "expected": 37.85411784
+  },
+  {
+   "from": "gal",
+   "to": "l",
+   "value": 15,
+   "expected": 56.78117676
+  },
+  {
+   "from": "gal",
+   "to": "l",
+   "value": 20,
+   "expected": 75.70823568
+  },
+  {
+   "from": "gal",
+   "to": "l",
+   "value": 50,
+   "expected": 189.2705892
+  },
+  {
+   "from": "l",
+   "to": "gal",
+   "value": 1,
+   "expected": 0.26417205235814845
+  },
+  {
+   "from": "l",
+   "to": "gal",
+   "value": 5,
+   "expected": 1.3208602617907421
+  },
+  {
+   "from": "l",
+   "to": "gal",
+   "value": 10,
+   "expected": 2.6417205235814842
+  },
+  {
+   "from": "l",
+   "to": "gal",
+   "value": 20,
+   "expected": 5.2834410471629685
+  },
+  {
+   "from": "l",
+   "to": "gal",
+   "value": 30,
+   "expected": 7.925161570744453
+  },
+  {
+   "from": "l",
+   "to": "gal",
+   "value": 50,
+   "expected": 13.20860261790742
+  },
+  {
+   "from": "l",
+   "to": "gal",
+   "value": 60,
+   "expected": 15.850323141488905
+  },
+  {
+   "from": "l",
+   "to": "gal",
+   "value": 100,
+   "expected": 26.41720523581484
+  },
+  {
+   "from": "cup",
+   "to": "ml",
+   "value": 0.25,
+   "expected": 60.0
+  },
+  {
+   "from": "cup",
+   "to": "ml",
+   "value": 0.5,
+   "expected": 120.0
+  },
+  {
+   "from": "cup",
+   "to": "ml",
+   "value": 1,
+   "expected": 240.0
+  },
+  {
+   "from": "cup",
+   "to": "ml",
+   "value": 1.5,
+   "expected": 360.0
+  },
+  {
+   "from": "cup",
+   "to": "ml",
+   "value": 2,
+   "expected": 480.0
+  },
+  {
+   "from": "cup",
+   "to": "ml",
+   "value": 3,
+   "expected": 720.0
+  },
+  {
+   "from": "cup",
+   "to": "ml",
+   "value": 4,
+   "expected": 960.0
+  },
+  {
+   "from": "cup",
+   "to": "ml",
+   "value": 5,
+   "expected": 1200.0
+  },
+  {
+   "from": "ml",
+   "to": "cup",
+   "value": 50,
+   "expected": 0.20833333333333334
+  },
+  {
+   "from": "ml",
+   "to": "cup",
+   "value": 100,
+   "expected": 0.4166666666666667
+  },
+  {
+   "from": "ml",
+   "to": "cup",
+   "value": 150,
+   "expected": 0.625
+  },
+  {
+   "from": "ml",
+   "to": "cup",
+   "value": 200,
+   "expected": 0.8333333333333334
+  },
+  {
+   "from": "ml",
+   "to": "cup",
+   "value": 240,
+   "expected": 1.0
+  },
+  {
+   "from": "ml",
+   "to": "cup",
+   "value": 250,
+   "expected": 1.0416666666666667
+  },
+  {
+   "from": "ml",
+   "to": "cup",
+   "value": 300,
+   "expected": 1.25
+  },
+  {
+   "from": "ml",
+   "to": "cup",
+   "value": 500,
+   "expected": 2.0833333333333335
+  },
+  {
+   "from": "tbsp",
+   "to": "ml",
+   "value": 0.5,
+   "expected": 7.5
+  },
+  {
+   "from": "tbsp",
+   "to": "ml",
+   "value": 1,
+   "expected": 15.0
+  },
+  {
+   "from": "tbsp",
+   "to": "ml",
+   "value": 1.5,
+   "expected": 22.5
+  },
+  {
+   "from": "tbsp",
+   "to": "ml",
+   "value": 2,
+   "expected": 30.0
+  },
+  {
+   "from": "tbsp",
+   "to": "ml",
+   "value": 3,
+   "expected": 45.0
+  },
+  {
+   "from": "tbsp",
+   "to": "ml",
+   "value": 4,
+   "expected": 60.0
+  },
+  {
+   "from": "tbsp",
+   "to": "ml",
+   "value": 5,
+   "expected": 75.0
+  },
+  {
+   "from": "tbsp",
+   "to": "ml",
+   "value": 10,
+   "expected": 150.0
+  },
+  {
+   "from": "ml",
+   "to": "tbsp",
+   "value": 5,
+   "expected": 0.33333333333333337
+  },
+  {
+   "from": "ml",
+   "to": "tbsp",
+   "value": 10,
+   "expected": 0.6666666666666667
+  },
+  {
+   "from": "ml",
+   "to": "tbsp",
+   "value": 15,
+   "expected": 1.0
+  },
+  {
+   "from": "ml",
+   "to": "tbsp",
+   "value": 20,
+   "expected": 1.3333333333333335
+  },
+  {
+   "from": "ml",
+   "to": "tbsp",
+   "value": 30,
+   "expected": 2.0
+  },
+  {
+   "from": "ml",
+   "to": "tbsp",
+   "value": 45,
+   "expected": 3.0
+  },
+  {
+   "from": "ml",
+   "to": "tbsp",
+   "value": 50,
+   "expected": 3.3333333333333335
+  },
+  {
+   "from": "ml",
+   "to": "tbsp",
+   "value": 100,
+   "expected": 6.666666666666667
+  },
+  {
+   "from": "tsp",
+   "to": "ml",
+   "value": 0.5,
+   "expected": 2.5
+  },
+  {
+   "from": "tsp",
+   "to": "ml",
+   "value": 1,
+   "expected": 5.0
+  },
+  {
+   "from": "tsp",
+   "to": "ml",
+   "value": 1.5,
+   "expected": 7.5
+  },
+  {
+   "from": "tsp",
+   "to": "ml",
+   "value": 2,
+   "expected": 10.0
+  },
+  {
+   "from": "tsp",
+   "to": "ml",
+   "value": 3,
+   "expected": 15.0
+  },
+  {
+   "from": "tsp",
+   "to": "ml",
+   "value": 4,
+   "expected": 20.0
+  },
+  {
+   "from": "tsp",
+   "to": "ml",
+   "value": 5,
+   "expected": 25.0
+  },
+  {
+   "from": "tsp",
+   "to": "ml",
+   "value": 10,
+   "expected": 50.0
+  },
+  {
+   "from": "ml",
+   "to": "tsp",
+   "value": 1,
+   "expected": 0.2
+  },
+  {
+   "from": "ml",
+   "to": "tsp",
+   "value": 2,
+   "expected": 0.4
+  },
+  {
+   "from": "ml",
+   "to": "tsp",
+   "value": 3,
+   "expected": 0.6
+  },
+  {
+   "from": "ml",
+   "to": "tsp",
+   "value": 5,
+   "expected": 1.0
+  },
+  {
+   "from": "ml",
+   "to": "tsp",
+   "value": 10,
+   "expected": 2.0
+  },
+  {
+   "from": "ml",
+   "to": "tsp",
+   "value": 15,
+   "expected": 3.0
+  },
+  {
+   "from": "ml",
+   "to": "tsp",
+   "value": 20,
+   "expected": 4.0
+  },
+  {
+   "from": "ml",
+   "to": "tsp",
+   "value": 30,
+   "expected": 6.0
+  },
+  {
+   "from": "floz",
+   "to": "ml",
+   "value": 1,
+   "expected": 29.5735295625
+  },
+  {
+   "from": "floz",
+   "to": "ml",
+   "value": 2,
+   "expected": 59.147059125
+  },
+  {
+   "from": "floz",
+   "to": "ml",
+   "value": 4,
+   "expected": 118.29411825
+  },
+  {
+   "from": "floz",
+   "to": "ml",
+   "value": 8,
+   "expected": 236.5882365
+  },
+  {
+   "from": "floz",
+   "to": "ml",
+   "value": 12,
+   "expected": 354.88235474999993
+  },
+  {
+   "from": "floz",
+   "to": "ml",
+   "value": 16,
+   "expected": 473.176473
+  },
+  {
+   "from": "floz",
+   "to": "ml",
+   "value": 20,
+   "expected": 591.47059125
+  },
+  {
+   "from": "floz",
+   "to": "ml",
+   "value": 32,
+   "expected": 946.352946
+  },
+  {
+   "from": "ml",
+   "to": "floz",
+   "value": 30,
+   "expected": 1.0144206810552898
+  },
+  {
+   "from": "ml",
+   "to": "floz",
+   "value": 50,
+   "expected": 1.69070113509215
+  },
+  {
+   "from": "ml",
+   "to": "floz",
+   "value": 100,
+   "expected": 3.3814022701843
+  },
+  {
+   "from": "ml",
+   "to": "floz",
+   "value": 200,
+   "expected": 6.7628045403686
+  },
+  {
+   "from": "ml",
+   "to": "floz",
+   "value": 250,
+   "expected": 8.45350567546075
+  },
+  {
+   "from": "ml",
+   "to": "floz",
+   "value": 330,
+   "expected": 11.15862749160819
+  },
+  {
+   "from": "ml",
+   "to": "floz",
+   "value": 500,
+   "expected": 16.9070113509215
+  },
+  {
+   "from": "ml",
+   "to": "floz",
+   "value": 750,
+   "expected": 25.360517026382247
+  }
+ ]
+}
