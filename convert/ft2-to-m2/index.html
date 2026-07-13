@@ -45,7 +45,26 @@
   <h2 style="font-size:1rem;margin-bottom:10px">관련 변환</h2>
   <div class="rel-grid"><a class="rel-link" href="../pyeong-to-m2/index.html">평 → 제곱미터</a><a class="rel-link" href="../m2-to-pyeong/index.html">제곱미터 → 평</a><a class="rel-link" href="../acre-to-m2/index.html">에이커 → 제곱미터</a><a class="rel-link" href="../m2-to-acre/index.html">제곱미터 → 에이커</a><a class="rel-link" href="../ha-to-m2/index.html">헥타르 → 제곱미터</a></div>
 </div>
-
+<aside class="promo" data-coupang>
+  <span class="promo-label">AD · 쿠팡 파트너스</span>
+  <div class="coupang-wrap">
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>
+      new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009",
+        width: String(Math.min(680, document.documentElement.clientWidth - 48)), height: "140", tsource: "" });
+    </script>
+  </div>
+  <p class="promo-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+</aside>
+<script>
+  // 광고 미표시(차단기 등) 시 빈 카드 숨김
+  setTimeout(function () {
+    document.querySelectorAll('.promo[data-coupang]').forEach(function (el) {
+      var f = el.querySelector('iframe');
+      if (!f || f.getBoundingClientRect().height < 10) el.hidden = true;
+    });
+  }, 4000);
+</script>
 </main>
 <section class="seo-content">
 <h2>제곱피트에서 제곱미터로 어떻게 바꾸나요?</h2>

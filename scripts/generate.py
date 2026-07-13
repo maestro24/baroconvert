@@ -23,25 +23,31 @@ MAX_PAGES = 600  # 파일럿 상한 — 확장은 색인율 확인 후 (docs/PLA
 
 CAT_ICON = {"length": "📏", "weight": "⚖️", "temperature": "🌡️", "area": "🏠", "volume": "🧪"}
 
-# 쿠팡 파트너스 — 카테고리 맥락형. url이 플레이스홀더(__로 시작)면 hidden 상태로 출력
-PROMO = {
-    "weight": {"url": "__COUPANG_SCALE__", "label": "⚖️ 디지털 주방저울 보러가기"},
-    "volume": {"url": "__COUPANG_SCALE__", "label": "⚖️ 디지털 주방저울 보러가기"},
-    "length": {"url": "__COUPANG_TAPE__", "label": "📏 자동 줄자 보러가기"},
-}
+# 쿠팡 파트너스 다이나믹 배너 — 페어 허브·환율 페이지에만 (수치 페이지 제외: 씬 페이지+광고 = 저품질 신호)
 DISCLOSURE = "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
 
 
-def promo_html(cat):
-    p = PROMO.get(cat)
-    if not p:
-        return ""
-    hidden = " hidden" if p["url"].startswith("__") else ""
-    return f"""<aside class="promo" data-coupang{hidden}>
-  <span class="promo-label">AD · 쿠팡 파트너스</span><br/>
-  <a href="{p['url']}" target="_blank" rel="sponsored noopener">{p['label']}</a>
-  <p class="promo-disclosure">{DISCLOSURE}</p>
-</aside>"""
+def promo_html(_cat=None):
+    return ("""<aside class="promo" data-coupang>
+  <span class="promo-label">AD · 쿠팡 파트너스</span>
+  <div class="coupang-wrap">
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>
+      new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009",
+        width: String(Math.min(680, document.documentElement.clientWidth - 48)), height: "140", tsource: "" });
+    </script>
+  </div>
+  <p class="promo-disclosure">""" + DISCLOSURE + """</p>
+</aside>
+<script>
+  // 광고 미표시(차단기 등) 시 빈 카드 숨김
+  setTimeout(function () {
+    document.querySelectorAll('.promo[data-coupang]').forEach(function (el) {
+      var f = el.querySelector('iframe');
+      if (!f || f.getBoundingClientRect().height < 10) el.hidden = true;
+    });
+  }, 4000);
+</script>""")
 CAT_DESC = {
     "length": "키, 모니터, 거리 — 피트·인치·마일을 미터법으로",
     "weight": "직구, 요리, 금 시세 — 파운드·온스·근·돈",
@@ -393,7 +399,8 @@ def build_fx(site):
 <div class="card">
   <h2 style="font-size:1rem;margin-bottom:10px">주요 통화 환율표</h2>
   <div id="fx-table"><div class="empty">환율 데이터를 불러오는 중…</div></div>
-</div>"""
+</div>
+""" + promo_html()
     seo = """<section class="seo-content">
 <h2>이 환율은 어디서 오나요?</h2>
 <p>유럽중앙은행(ECB)이 고시하는 기준 환율을 매일 한 번 수집해 표시합니다. 실시간 시세가 아니며, 은행 환전·해외 송금에는 각 은행의 고시 환율과 수수료가 적용됩니다. 대략적인 금액 감을 잡는 용도로 활용하세요.</p>

@@ -45,11 +45,26 @@
   <h2 style="font-size:1rem;margin-bottom:10px">관련 변환</h2>
   <div class="rel-grid"><a class="rel-link" href="../gal-to-l/index.html">갤런 → 리터 역변환</a><a class="rel-link" href="../cup-to-ml/index.html">컵 → 밀리리터</a><a class="rel-link" href="../ml-to-cup/index.html">밀리리터 → 컵</a><a class="rel-link" href="../tbsp-to-ml/index.html">큰술 → 밀리리터</a><a class="rel-link" href="../ml-to-tbsp/index.html">밀리리터 → 큰술</a><a class="rel-link" href="../tsp-to-ml/index.html">작은술 → 밀리리터</a><a class="rel-link" href="../ml-to-tsp/index.html">밀리리터 → 작은술</a></div>
 </div>
-<aside class="promo" data-coupang hidden>
-  <span class="promo-label">AD · 쿠팡 파트너스</span><br/>
-  <a href="__COUPANG_SCALE__" target="_blank" rel="sponsored noopener">⚖️ 디지털 주방저울 보러가기</a>
+<aside class="promo" data-coupang>
+  <span class="promo-label">AD · 쿠팡 파트너스</span>
+  <div class="coupang-wrap">
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>
+      new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009",
+        width: String(Math.min(680, document.documentElement.clientWidth - 48)), height: "140", tsource: "" });
+    </script>
+  </div>
   <p class="promo-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
 </aside>
+<script>
+  // 광고 미표시(차단기 등) 시 빈 카드 숨김
+  setTimeout(function () {
+    document.querySelectorAll('.promo[data-coupang]').forEach(function (el) {
+      var f = el.querySelector('iframe');
+      if (!f || f.getBoundingClientRect().height < 10) el.hidden = true;
+    });
+  }, 4000);
+</script>
 </main>
 <section class="seo-content">
 <h2>리터에서 갤런로 어떻게 바꾸나요?</h2>
