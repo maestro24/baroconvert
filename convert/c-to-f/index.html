@@ -59,7 +59,7 @@
 <script>
   // 광고 미표시(차단기 등) 시 빈 카드 숨김
   setTimeout(function () {
-    document.querySelectorAll('.promo[data-coupang]').forEach(function (el) {
+    document.querySelectorAll('[data-coupang]').forEach(function (el) {
       var f = el.querySelector('iframe');
       if (!f || f.getBoundingClientRect().height < 10) el.hidden = true;
     });
@@ -80,5 +80,11 @@
 import { initConverter } from '../../js/app.js';
 initConverter('c', 'f');
 </script>
+<div class="side-rail side-l" data-coupang>
+  <script>new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009", width: "160", height: "600", tsource: "" });</script>
+</div>
+<div class="side-rail side-r" data-coupang>
+  <script>new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009", width: "160", height: "600", tsource: "" });</script>
+</div>
 </body>
 </html>

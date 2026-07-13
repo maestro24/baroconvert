@@ -174,4 +174,10 @@ h1.page-title { font-size: 1.3rem; font-weight: 900; line-height: 1.35; }
 .promo a { font-weight: 800; display: inline-block; margin: 4px 0; }
 .promo-disclosure { font-size: 0.72rem; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
 [hidden] { display: none !important; }
-.coupang-wrap { display: flex; justify-content: center; margin: 8px 0; min-height: 140px; }
+.coupang-wrap { display: flex; justify-content: center; margin: 8px 0; min-height: 140px; max-width: 100%; overflow-x: hidden; }
+
+/* ── 쿠팡 사이드 레일 (넓은 화면 전용) ── */
+.side-rail { position: fixed; top: 90px; width: 160px; display: none; z-index: 5; }
+@media (min-width: 1120px) { .side-rail { display: block; } }
+.side-l { left: calc(50% - 544px); }
+.side-r { left: calc(50% + 384px); }

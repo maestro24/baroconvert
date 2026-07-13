@@ -42,12 +42,25 @@ def promo_html(_cat=None):
 <script>
   // 광고 미표시(차단기 등) 시 빈 카드 숨김
   setTimeout(function () {
-    document.querySelectorAll('.promo[data-coupang]').forEach(function (el) {
+    document.querySelectorAll('[data-coupang]').forEach(function (el) {
       var f = el.querySelector('iframe');
       if (!f || f.getBoundingClientRect().height < 10) el.hidden = true;
     });
   }, 4000);
 </script>""")
+
+
+RAILS = """<div class="side-rail side-l" data-coupang>
+  <script>new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009", width: "160", height: "600", tsource: "" });</script>
+</div>
+<div class="side-rail side-r" data-coupang>
+  <script>new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009", width: "160", height: "600", tsource: "" });</script>
+</div>
+"""
+
+
+def add_rails(html):
+    return html.replace("</body>", RAILS + "</body>", 1)
 CAT_DESC = {
     "length": "키, 모니터, 거리 — 피트·인치·마일을 미터법으로",
     "weight": "직구, 요리, 금 시세 — 파운드·온스·근·돈",
@@ -241,15 +254,15 @@ def build_pair_hub(site, data, pair, all_pairs):
         canonical=canonical, depth=2, body=body, jsonld=faq, seo_html=seo,
     ))
 
-    # 허브 페이지에 변환기 JS 주입
-    site.pages[path] = site.pages[path].replace(
+    # 허브 페이지에 변환기 JS + 사이드 레일 주입
+    site.pages[path] = add_rails(site.pages[path].replace(
         "</body>",
         f"""<script type="module">
 import {{ initConverter }} from '../../js/app.js';
 initConverter('{a}', '{b}');
 </script>
 </body>""",
-    )
+    ))
 
 
 # ── 수치 페이지 ─────────────────────────────────────
@@ -414,7 +427,7 @@ import { initFxPage } from '../js/app.js';
 initFxPage();
 </script>
 </body>""")
-    site.emit(path, html)
+    site.emit(path, add_rails(html))
 
 
 # ── 사이트맵 ────────────────────────────────────────
