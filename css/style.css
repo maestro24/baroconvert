@@ -167,3 +167,10 @@ h1.page-title { font-size: 1.3rem; font-weight: 900; line-height: 1.35; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+/* ── 쿠팡 파트너스 슬롯 ── */
+.promo { border: 1px solid var(--border); background: var(--bg-card); border-radius: 12px; padding: 14px 16px; }
+.promo-label { font-size: 0.68rem; color: var(--text-dim); font-weight: 800; letter-spacing: 0.05em; }
+.promo a { font-weight: 800; display: inline-block; margin: 4px 0; }
+.promo-disclosure { font-size: 0.72rem; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+[hidden] { display: none !important; }

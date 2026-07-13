@@ -22,6 +22,26 @@ SITE_URL = "https://maestro24.github.io/baroconvert"
 MAX_PAGES = 600  # 파일럿 상한 — 확장은 색인율 확인 후 (docs/PLAN.md §12)
 
 CAT_ICON = {"length": "📏", "weight": "⚖️", "temperature": "🌡️", "area": "🏠", "volume": "🧪"}
+
+# 쿠팡 파트너스 — 카테고리 맥락형. url이 플레이스홀더(__로 시작)면 hidden 상태로 출력
+PROMO = {
+    "weight": {"url": "__COUPANG_SCALE__", "label": "⚖️ 디지털 주방저울 보러가기"},
+    "volume": {"url": "__COUPANG_SCALE__", "label": "⚖️ 디지털 주방저울 보러가기"},
+    "length": {"url": "__COUPANG_TAPE__", "label": "📏 자동 줄자 보러가기"},
+}
+DISCLOSURE = "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
+
+
+def promo_html(cat):
+    p = PROMO.get(cat)
+    if not p:
+        return ""
+    hidden = " hidden" if p["url"].startswith("__") else ""
+    return f"""<aside class="promo" data-coupang{hidden}>
+  <span class="promo-label">AD · 쿠팡 파트너스</span><br/>
+  <a href="{p['url']}" target="_blank" rel="sponsored noopener">{p['label']}</a>
+  <p class="promo-disclosure">{DISCLOSURE}</p>
+</aside>"""
 CAT_DESC = {
     "length": "키, 모니터, 거리 — 피트·인치·마일을 미터법으로",
     "weight": "직구, 요리, 금 시세 — 파운드·온스·근·돈",
@@ -201,7 +221,8 @@ def build_pair_hub(site, data, pair, all_pairs):
 <div class="card">
   <h2 style="font-size:1rem;margin-bottom:10px">관련 변환</h2>
   <div class="rel-grid">{''.join(rel)}</div>
-</div>"""
+</div>
+{promo_html(cat)}"""
 
     seo = f"""<section class="seo-content">
 <h2>{an}에서 {bn}로 어떻게 바꾸나요?</h2>
