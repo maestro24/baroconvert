@@ -13,6 +13,7 @@ import json
 import os
 import shutil
 import sys
+from datetime import date
 
 sys.path.insert(0, os.path.dirname(__file__))
 import conversions  # noqa: E402  (Agent 산출물 — 동일 units.json 사용)
@@ -500,13 +501,14 @@ initFxPage();
 
 # ── 사이트맵 ────────────────────────────────────────
 def build_sitemap(site):
+    today = date.today().isoformat()
     urls = []
     for path in sorted(site.pages):
         loc = SITE_URL + "/" + path.replace("index.html", "").rstrip("/")
         loc = loc if loc.endswith("/") or "." in loc.rsplit("/", 1)[-1] else loc + "/"
         if path == "index.html":
             loc = SITE_URL + "/"
-        urls.append(f"<url><loc>{loc}</loc></url>")
+        urls.append(f"<url><loc>{loc}</loc><lastmod>{today}</lastmod></url>")
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
            + "\n".join(urls) + "\n</urlset>\n")
