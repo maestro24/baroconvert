@@ -19,6 +19,7 @@ import conversions  # noqa: E402  (Agent 산출물 — 동일 units.json 사용)
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), ".."))
 SITE_URL = "https://maestro24.github.io/baroconvert"
+OG_IMAGE = "https://maestro24.github.io/baroconvert/assets/og-image.png"
 MAX_PAGES = 600  # 파일럿 상한 — 확장은 색인율 확인 후 (docs/PLAN.md §12)
 
 CAT_ICON = {"length": "📏", "weight": "⚖️", "temperature": "🌡️", "area": "🏠", "volume": "🧪"}
@@ -74,6 +75,38 @@ def fmt(v):
     return conversions.format_result(v)
 
 
+# ── 한국어 조사 선택 (받침 판정) ─────────────────────
+# 비한글 기호는 한국어 읽기 끝소리로 받침 유무 판정 (예: mi=마일→ㄹ, g=그램→ㅁ)
+_SYMBOL_BATCHIM = {
+    "mi": True, "mg": True, "g": True, "kg": True, "t": True, "gal": True,
+    "근": True, "돈": True, "냥": True, "평": True, "컵": True, "큰술": True, "작은술": True,
+}
+
+
+def _has_batchim(word):
+    """단어(또는 기호)의 마지막 소리에 받침이 있으면 True."""
+    s = str(word).strip()
+    if not s:
+        return False
+    ch = s[-1]
+    if "가" <= ch <= "힣":
+        return (ord(ch) - 0xAC00) % 28 != 0
+    return _SYMBOL_BATCHIM.get(s, False)
+
+
+def josa(word, kind="은는"):
+    """받침 유무에 맞는 조사를 반환. kind: 은는 / 이가 / 을를 / 으로."""
+    pairs = {"은는": ("은", "는"), "이가": ("이", "가"),
+             "을를": ("을", "를"), "으로": ("으로", "로")}
+    with_b, without_b = pairs[kind]
+    # 으로 특례: ㄹ 받침은 '로'
+    if kind == "으로":
+        s = str(word).strip()
+        if s and "가" <= s[-1] <= "힣" and (ord(s[-1]) - 0xAC00) % 28 == 8:
+            return "로"
+    return with_b if _has_batchim(word) else without_b
+
+
 # ── 공통 셸 ─────────────────────────────────────────
 def shell(*, title, desc, canonical, depth, body, jsonld=None, seo_html=""):
     p = "../" * depth
@@ -99,6 +132,11 @@ def shell(*, title, desc, canonical, depth, body, jsonld=None, seo_html=""):
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{canonical}" />
 <meta property="og:locale" content="ko_KR" />
+<meta property="og:image" content="{OG_IMAGE}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{title}" />
+<meta name="twitter:description" content="{desc}" />
+<meta name="twitter:image" content="{OG_IMAGE}" />
 <meta name="theme-color" content="#f6f9f9" />
 <link rel="icon" href="{FAVICON}" />
 {ld}
@@ -217,9 +255,9 @@ def build_pair_hub(site, data, pair, all_pairs):
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-            {"@type": "Question", "name": f"1{an}는 몇 {bn}인가요?",
-             "acceptedAnswer": {"@type": "Answer", "text": f"1{an}({asym})는 {fmt(one)}{bn}({bsym})입니다."}},
-            {"@type": "Question", "name": f"{an}를 {bn}로 바꾸는 공식은?",
+            {"@type": "Question", "name": f"1{an}{josa(an, '은는')} 몇 {bn}인가요?",
+             "acceptedAnswer": {"@type": "Answer", "text": f"1{an}({asym}){josa(asym, '은는')} {fmt(one)}{bn}({bsym})입니다."}},
+            {"@type": "Question", "name": f"{an}{josa(an, '을를')} {bn}{josa(bn, '으로')} 바꾸는 공식은?",
              "acceptedAnswer": {"@type": "Answer", "text": f"{an} 값에 {fmt(one)}을(를) 곱하면 {bn} 값이 됩니다." if "affine" not in uinfo[a] and "affine" not in uinfo[b] else "섭씨 = (화씨 − 32) × 5/9, 화씨 = 섭씨 × 9/5 + 32 입니다."}},
         ],
     }
@@ -256,7 +294,7 @@ def build_pair_hub(site, data, pair, all_pairs):
 
     site.emit(path, shell(
         title=f"{an} {bn} 변환 — {asym} to {bsym} 계산기 | 바로변환",
-        desc=f"{an}({asym})를 {bn}({bsym})로 즉시 변환. 1{asym} = {fmt(one)}{bsym}. 자주 찾는 값 변환표와 공식까지.",
+        desc=f"{an}({asym}){josa(asym, '을를')} {bn}({bsym}){josa(bsym, '으로')} 즉시 변환. 1{asym} = {fmt(one)}{bsym}. 자주 찾는 값 변환표와 공식까지.",
         canonical=canonical, depth=2, body=body, jsonld=faq, seo_html=seo,
     ))
 
@@ -293,10 +331,10 @@ def build_value_page(site, data, pair, v):
         rows.append(f"<tr{cls}><td>{cell}</td><td>{fmt(res)} {bsym}</td></tr>")
     site.link(path, f"{pair_dir(a, b)}/index.html")
 
-    body = f"""<nav class="crumb"><a href="../../../index.html">홈</a> › <a href="../index.html">{an} → {bn} 변환기</a> › {fmt(v)}{asym}</nav>
+    body = f"""<nav class="crumb"><a href="../../../index.html">홈</a> › <a href="../../../c/{cat}/index.html">{data['categories'][cat]['nameKo']}</a> › <a href="../index.html">{an} → {bn} 변환기</a> › {fmt(v)}{asym}</nav>
 <div class="answer">
-  <div class="eq">{fmt(v)} {asym} = <b>{fmt(r)} {bsym}</b></div>
-  <div class="sub">{an} {fmt(v)}{asym}는 {bn}로 {fmt(r)}{bsym}입니다</div>
+  <h1 class="eq">{fmt(v)} {asym} = <b>{fmt(r)} {bsym}</b></h1>
+  <div class="sub">{an} {fmt(v)}{asym}{josa(asym, '은는')} {bn}{josa(bn, '으로')} {fmt(r)}{bsym}입니다</div>
 </div>
 <div class="card">
   <h2 style="font-size:1rem;margin-bottom:10px">근처 값 변환표</h2>
@@ -308,10 +346,27 @@ def build_value_page(site, data, pair, v):
   <p style="font-size:0.9rem">다른 값을 바꾸려면 <a href="../index.html"><b>{an} → {bn} 변환기</b></a>에서 직접 입력하세요.</p>
 </div>"""
 
+    breadcrumb = {
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "홈", "item": f"{SITE_URL}/"},
+            {"@type": "ListItem", "position": 2, "name": data["categories"][cat]["nameKo"], "item": f"{SITE_URL}/c/{cat}/"},
+            {"@type": "ListItem", "position": 3, "name": f"{an} → {bn} 변환기", "item": f"{SITE_URL}/{pair_dir(a, b)}/"},
+            {"@type": "ListItem", "position": 4, "name": f"{fmt(v)}{asym}", "item": canonical},
+        ],
+    }
+    vfaq = {
+        "@context": "https://schema.org", "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": f"{fmt(v)}{asym}{josa(asym, '은는')} 몇 {bn}({bsym})인가요?",
+             "acceptedAnswer": {"@type": "Answer", "text": f"{an} {fmt(v)}{asym}{josa(asym, '은는')} {bn} {fmt(r)}{bsym}입니다."}},
+        ],
+    }
+
     site.emit(path, shell(
-        title=f"{fmt(v)}{asym}는 몇 {bsym}? = {fmt(r)}{bsym} | 바로변환",
-        desc=f"{an} {fmt(v)}{asym}는 {bn}로 {fmt(r)}{bsym}입니다. 근처 값 변환표와 즉시 계산기 제공.",
-        canonical=canonical, depth=3, body=body,
+        title=f"{fmt(v)}{asym}{josa(asym, '은는')} 몇 {bsym}? = {fmt(r)}{bsym} | 바로변환",
+        desc=f"{an} {fmt(v)}{asym}{josa(asym, '은는')} {bn}{josa(bn, '으로')} {fmt(r)}{bsym}입니다. 근처 값 변환표와 즉시 계산기 제공.",
+        canonical=canonical, depth=3, body=body, jsonld=[breadcrumb, vfaq],
     ))
 
 
@@ -337,10 +392,17 @@ def build_category_hub(site, data, cat, pairs):
   <p class="page-desc">{CAT_DESC.get(cat, '')}</p>
 </div>
 <div class="cat-grid">{''.join(cards)}</div>"""
+    breadcrumb = {
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "홈", "item": f"{SITE_URL}/"},
+            {"@type": "ListItem", "position": 2, "name": cinfo["nameKo"], "item": f"{SITE_URL}/c/{cat}/"},
+        ],
+    }
     site.emit(path, shell(
         title=f"{cinfo['nameKo']} 단위 변환 — {CAT_DESC.get(cat, '')} | 바로변환",
         desc=f"{cinfo['nameKo']} 단위 변환기 모음. {CAT_DESC.get(cat, '')}.",
-        canonical=f"{SITE_URL}/c/{cat}/", depth=2, body=body,
+        canonical=f"{SITE_URL}/c/{cat}/", depth=2, body=body, jsonld=breadcrumb,
     ))
 
 
