@@ -31,11 +31,7 @@ def promo_html(_cat=None):
     return ("""<aside class="promo" data-coupang>
   <span class="promo-label">AD · 쿠팡 파트너스</span>
   <div class="coupang-wrap">
-    <script src="https://ads-partners.coupang.com/g.js"></script>
-    <script>
-      new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009",
-        width: String(Math.min(680, document.documentElement.clientWidth - 48)), height: "140", tsource: "" });
-    </script>
+    <a href="https://link.coupang.com/a/flCfhuxEJM" target="_blank" rel="sponsored noopener" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/1006097?trackingCode=AF8748009&subId=&traceId=V0-301-879dd1202e5c73b2-I1006097&w=728&h=90" alt="쿠팡 파트너스 배너" style="max-width:100%;height:auto" loading="lazy"></a>
   </div>
   <p class="promo-disclosure">""" + DISCLOSURE + """</p>
 </aside>
@@ -44,13 +40,16 @@ def promo_html(_cat=None):
   setTimeout(function () {
     document.querySelectorAll('[data-coupang]').forEach(function (el) {
       var f = el.querySelector('iframe');
-      if (!f || f.getBoundingClientRect().height < 10) el.hidden = true;
+      var m = el.querySelector('img');
+      var ok = (f && f.getBoundingClientRect().height >= 10) || (m && m.complete && m.naturalWidth > 0);
+      if (!ok) el.hidden = true;
     });
   }, 4000);
 </script>""")
 
 
 RAILS = """<div class="side-rail side-l" data-coupang>
+  <script src="https://ads-partners.coupang.com/g.js"></script>
   <script>new PartnersCoupang.G({ id: 1006093, template: "carousel", trackingCode: "AF8748009", width: "160", height: "600", tsource: "" });</script>
 </div>
 <div class="side-rail side-r" data-coupang>
