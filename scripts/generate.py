@@ -260,6 +260,8 @@ def build_pair_hub(site, data, pair, all_pairs):
              "acceptedAnswer": {"@type": "Answer", "text": f"1{an}({asym}){josa(asym, '은는')} {fmt(one)}{bn}({bsym})입니다."}},
             {"@type": "Question", "name": f"{an}{josa(an, '을를')} {bn}{josa(bn, '으로')} 바꾸는 공식은?",
              "acceptedAnswer": {"@type": "Answer", "text": f"{an} 값에 {fmt(one)}을(를) 곱하면 {bn} 값이 됩니다." if "affine" not in uinfo[a] and "affine" not in uinfo[b] else "섭씨 = (화씨 − 32) × 5/9, 화씨 = 섭씨 × 9/5 + 32 입니다."}},
+            {"@type": "Question", "name": f"{an}{josa(an, '을를')} {bn}{josa(bn, '으로')} 빠르게 환산하려면?",
+             "acceptedAnswer": {"@type": "Answer", "text": f"위 계산기에 {an} 숫자를 입력하면 즉시 {bn}{josa(bn, '으로')} 환산됩니다. 자주 쓰는 값은 아래 변환표에서 바로 확인할 수 있습니다."}},
         ],
     }
 
@@ -291,11 +293,12 @@ def build_pair_hub(site, data, pair, all_pairs):
     seo = f"""<section class="seo-content">
 <h2>{an}에서 {bn}로 어떻게 바꾸나요?</h2>
 <p>{'%s 1단위는 %s %s입니다. %s 값에 %s을(를) 곱하면 %s 값을 얻습니다.' % (an, fmt(one), bn, an, fmt(one), bn) if 'affine' not in uinfo[a] and 'affine' not in uinfo[b] else '화씨(°F)와 섭씨(°C)는 곱셈만으로 바꿀 수 없는 단위입니다. 섭씨 = (화씨 − 32) × 5/9 공식을 사용하며, 예를 들어 화씨 100도는 섭씨 약 37.8도입니다.'} 위 변환기는 입력 즉시 계산되며, 반대 방향 입력도 지원합니다.</p>
+<p>직접 계산이 번거롭다면 위 {an}({asym}) {bn}({bsym}) 계산기에 값을 넣어 바로 환산하세요. 아래 변환표에는 {an}{josa(an, '을를')} {bn}{josa(bn, '으로')} 바꿀 때 자주 찾는 수치를 미리 정리해 두었습니다.</p>
 </section>"""
 
     site.emit(path, shell(
-        title=f"{an} {bn} 변환 — {asym} to {bsym} 계산기 | 바로변환",
-        desc=f"{an}({asym}){josa(asym, '을를')} {bn}({bsym}){josa(bsym, '으로')} 즉시 변환. 1{asym} = {fmt(one)}{bsym}. 자주 찾는 값 변환표와 공식까지.",
+        title=f"{an} {bn} 변환·환산 — {asym} to {bsym} 계산기 | 바로변환",
+        desc=f"{an}({asym}){josa(asym, '을를')} {bn}({bsym}){josa(bsym, '으로')} 즉시 변환. 1{asym} = {fmt(one)}{bsym}. 자주 찾는 값 환산표와 계산 공식까지.",
         canonical=canonical, depth=2, body=body, jsonld=faq, seo_html=seo,
     ))
 
@@ -402,7 +405,7 @@ def build_category_hub(site, data, cat, pairs):
     }
     site.emit(path, shell(
         title=f"{cinfo['nameKo']} 단위 변환 — {CAT_DESC.get(cat, '')} | 바로변환",
-        desc=f"{cinfo['nameKo']} 단위 변환기 모음. {CAT_DESC.get(cat, '')}.",
+        desc=f"{cinfo['nameKo']} 단위 변환기·환산 계산기 모음. {CAT_DESC.get(cat, '')}. 숫자만 입력하면 즉시 계산됩니다.",
         canonical=f"{SITE_URL}/c/{cat}/", depth=2, body=body, jsonld=breadcrumb,
     ))
 
@@ -443,9 +446,15 @@ def build_index(site, data, pairs):
 
     seo = """<section class="seo-content">
 <h2>바로변환은 어떤 서비스인가요?</h2>
-<p>바로변환은 길이·무게·온도·넓이·부피 등 일상에서 마주치는 단위를 한국어로 즉시 변환하는 무료 도구입니다. 해외직구의 파운드와 온스, 부동산의 평과 제곱미터, 미국 날씨의 화씨, 레시피의 컵과 큰술까지 — 정확한 국제 표준 계수로 계산합니다. 설치와 회원가입 없이 브라우저에서 바로 사용하세요.</p>
+<p>바로변환은 길이·무게·온도·넓이·부피 등 일상에서 마주치는 단위를 한국어로 즉시 변환·환산하는 무료 계산기입니다. 해외직구의 파운드와 온스, 부동산의 평과 제곱미터, 미국 날씨의 화씨, 레시피의 컵과 큰술까지 — 정확한 국제 표준 계수로 계산합니다. 설치와 회원가입 없이 브라우저에서 바로 사용하세요.</p>
+<h2>단위 변환기 사용법</h2>
+<p>원하는 카테고리에서 변환할 단위를 고른 뒤 숫자를 입력하면 결과가 바로 나옵니다. ⇄ 버튼으로 방향을 바꿔 역변환도 가능하며, 각 페이지의 변환표에서 자주 찾는 값을 미리 확인할 수 있습니다. 예를 들어 &lt;피트를 센티미터로 변환&gt;, &lt;평을 제곱미터로 환산&gt;, &lt;화씨를 섭씨로 계산&gt; 같은 상황에서 바로 쓸 수 있습니다.</p>
 <h2>자주 묻는 질문</h2>
 <dl>
+<dt>단위 변환기는 무료인가요?</dt>
+<dd>네, 모든 변환과 환율 조회가 완전 무료입니다. 회원가입이나 앱 설치 없이 브라우저에서 바로 사용하며, 입력한 값은 서버로 전송되지 않고 기기 안에서만 계산됩니다.</dd>
+<dt>어떤 단위를 변환할 수 있나요?</dt>
+<dd>길이(피트·인치·야드·마일·미터), 무게(파운드·온스·근·돈·냥), 온도(화씨·섭씨·켈빈), 넓이(평·제곱미터·제곱피트), 부피(컵·큰술·갤런·리터)를 지원하며, 환율은 달러·엔·유로·위안을 원화로 환산합니다.</dd>
 <dt>변환 결과는 정확한가요?</dt>
 <dd>모든 계수는 국제 표준값(예: 1인치 = 정확히 2.54cm, 1파운드 = 정확히 453.59237g)을 사용하며, 자동 테스트로 검증됩니다.</dd>
 <dt>환율은 실시간인가요?</dt>
@@ -453,12 +462,27 @@ def build_index(site, data, pairs):
 </dl>
 </section>"""
 
+    home_faq = {
+        "@context": "https://schema.org", "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "단위 변환기는 무료인가요?",
+             "acceptedAnswer": {"@type": "Answer", "text": "네, 모든 변환과 환율 조회가 완전 무료입니다. 회원가입이나 앱 설치 없이 브라우저에서 바로 사용하며, 입력한 값은 서버로 전송되지 않고 기기 안에서만 계산됩니다."}},
+            {"@type": "Question", "name": "어떤 단위를 변환할 수 있나요?",
+             "acceptedAnswer": {"@type": "Answer", "text": "길이(피트·인치·야드·마일·미터), 무게(파운드·온스·근·돈·냥), 온도(화씨·섭씨·켈빈), 넓이(평·제곱미터·제곱피트), 부피(컵·큰술·갤런·리터)를 지원하며, 환율은 달러·엔·유로·위안을 원화로 환산합니다."}},
+            {"@type": "Question", "name": "변환 결과는 정확한가요?",
+             "acceptedAnswer": {"@type": "Answer", "text": "모든 계수는 국제 표준값(예: 1인치 = 정확히 2.54cm, 1파운드 = 정확히 453.59237g)을 사용하며, 자동 테스트로 검증됩니다."}},
+            {"@type": "Question", "name": "환율은 실시간인가요?",
+             "acceptedAnswer": {"@type": "Answer", "text": "아니요. 유럽중앙은행(ECB) 고시 기준으로 하루 한 번 갱신되며 기준 시각을 함께 표시합니다. 송금·환전 실거래는 은행 고시 환율을 확인하세요."}},
+        ],
+    }
+
     site.emit(path, shell(
-        title="바로변환 — 단위 변환기 (평·피트·온스·화씨·환율)",
-        desc="피트↔cm, 평↔제곱미터, 온스↔그램, 화씨↔섭씨, 달러↔원까지. 한국인이 자주 찾는 단위 변환을 즉시. 무료, 설치 불필요.",
+        title="바로변환 — 단위 변환기·환산 계산기 (평·피트·온스·화씨·환율)",
+        desc="피트↔cm, 평↔제곱미터, 온스↔그램, 화씨↔섭씨, 달러↔원까지. 한국인이 자주 찾는 단위 변환·환산을 즉시 계산. 무료, 설치 불필요.",
         canonical=f"{SITE_URL}/", depth=0, body=body, seo_html=seo,
-        jsonld={"@context": "https://schema.org", "@type": "WebSite", "url": f"{SITE_URL}/",
-                "name": "바로변환", "description": "단위 변환기 — 평·피트·온스·화씨·환율", "inLanguage": "ko"},
+        jsonld=[{"@context": "https://schema.org", "@type": "WebSite", "url": f"{SITE_URL}/",
+                 "name": "바로변환", "description": "단위 변환기 — 평·피트·온스·화씨·환율", "inLanguage": "ko"},
+                home_faq],
     ))
 
 
