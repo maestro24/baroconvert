@@ -25,7 +25,8 @@ MAX_PAGES = 600  # 파일럿 상한 — 확장은 색인율 확인 후 (docs/PLA
 
 CAT_ICON = {"length": "📏", "weight": "⚖️", "temperature": "🌡️", "area": "🏠", "volume": "🧪"}
 
-# 쿠팡 파트너스 다이나믹 배너 — 페어 허브·환율 페이지에만 (수치 페이지 제외: 씬 페이지+광고 = 저품질 신호)
+# 쿠팡 파트너스 다이나믹 배너 — 콘텐츠가 두꺼운 페이지에만: 홈·카테고리 허브·페어 허브·환율.
+# 수치(value) 페이지는 계속 제외: 씬 페이지+광고 = 저품질 신호 (이 결정 바꾸지 말 것)
 DISCLOSURE = "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
 
 
@@ -117,13 +118,10 @@ def shell(*, title, desc, canonical, depth, body, jsonld=None, seo_html=""):
 <head>
 <meta charset="utf-8" />
 <!-- Google Analytics (GA4) -->
+<!-- shared:ga4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2P73L29BH7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){{dataLayer.push(arguments);}}
-  gtag('js', new Date());
-  gtag('config', 'G-2P73L29BH7');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-2P73L29BH7');</script>
+<!-- /shared:ga4 -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{title}</title>
 <meta name="description" content="{desc}" />
@@ -395,7 +393,8 @@ def build_category_hub(site, data, cat, pairs):
   <h1 class="page-title">{CAT_ICON.get(cat, '')} {cinfo['nameKo']} 단위 변환</h1>
   <p class="page-desc">{CAT_DESC.get(cat, '')}</p>
 </div>
-<div class="cat-grid">{''.join(cards)}</div>"""
+<div class="cat-grid">{''.join(cards)}</div>
+{promo_html(cat)}"""
     breadcrumb = {
         "@context": "https://schema.org", "@type": "BreadcrumbList",
         "itemListElement": [
@@ -442,7 +441,8 @@ def build_index(site, data, pairs):
 <div class="cat-grid">
 {''.join(cats)}
 <a class="cat-card" href="fx/index.html"><span class="icon">💱</span><span class="name">환율</span><span class="desc">달러·엔·유로 → 원화, 매일 갱신</span></a>
-</div>"""
+</div>
+{promo_html()}"""
 
     seo = """<section class="seo-content">
 <h2>바로변환은 어떤 서비스인가요?</h2>

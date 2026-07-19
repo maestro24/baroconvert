@@ -44,6 +44,23 @@
 <a class="cat-card" href="c/length/index.html"><span class="icon">📏</span><span class="name">길이</span><span class="desc">키, 모니터, 거리 — 피트·인치·마일을 미터법으로</span></a><a class="cat-card" href="c/weight/index.html"><span class="icon">⚖️</span><span class="name">무게</span><span class="desc">직구, 요리, 금 시세 — 파운드·온스·근·돈</span></a><a class="cat-card" href="c/temperature/index.html"><span class="icon">🌡️</span><span class="name">온도</span><span class="desc">해외 날씨, 오븐 온도 — 화씨·섭씨</span></a><a class="cat-card" href="c/area/index.html"><span class="icon">🏠</span><span class="name">넓이</span><span class="desc">부동산 필수 — 평과 제곱미터</span></a><a class="cat-card" href="c/volume/index.html"><span class="icon">🧪</span><span class="name">부피</span><span class="desc">레시피 계량 — 컵·큰술·갤런·리터</span></a>
 <a class="cat-card" href="fx/index.html"><span class="icon">💱</span><span class="name">환율</span><span class="desc">달러·엔·유로 → 원화, 매일 갱신</span></a>
 </div>
+<aside class="promo" data-coupang>
+  <div class="coupang-wrap">
+    <a href="https://link.coupang.com/a/flCfhuxEJM" target="_blank" rel="sponsored noopener" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/1006097?trackingCode=AF8748009&subId=&traceId=V0-301-879dd1202e5c73b2-I1006097&w=728&h=90" alt="쿠팡 파트너스 배너" style="max-width:100%;height:auto" loading="lazy"></a>
+  </div>
+  <p class="promo-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+</aside>
+<script>
+  // 광고 미표시(차단기 등) 시 빈 카드 숨김
+  setTimeout(function () {
+    document.querySelectorAll('[data-coupang]').forEach(function (el) {
+      var f = el.querySelector('iframe');
+      var m = el.querySelector('img');
+      var ok = (f && f.getBoundingClientRect().height >= 10) || (m && m.complete && m.naturalWidth > 0);
+      if (!ok) el.hidden = true;
+    });
+  }, 4000);
+</script>
 </main>
 <section class="seo-content">
 <h2>바로변환은 어떤 서비스인가요?</h2>

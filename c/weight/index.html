@@ -38,6 +38,23 @@
   <p class="page-desc">직구, 요리, 금 시세 — 파운드·온스·근·돈</p>
 </div>
 <div class="cat-grid"><a class="cat-card" href="../../convert/oz-to-g/index.html"><span class="name">온스 → 그램</span><span class="desc">oz to g</span></a><a class="cat-card" href="../../convert/g-to-oz/index.html"><span class="name">그램 → 온스</span><span class="desc">g to oz</span></a><a class="cat-card" href="../../convert/lb-to-kg/index.html"><span class="name">파운드 → 킬로그램</span><span class="desc">lb to kg</span></a><a class="cat-card" href="../../convert/kg-to-lb/index.html"><span class="name">킬로그램 → 파운드</span><span class="desc">kg to lb</span></a><a class="cat-card" href="../../convert/geun-to-g/index.html"><span class="name">근 → 그램</span><span class="desc">근 to g</span></a><a class="cat-card" href="../../convert/g-to-geun/index.html"><span class="name">그램 → 근</span><span class="desc">g to 근</span></a><a class="cat-card" href="../../convert/don-to-g/index.html"><span class="name">돈 → 그램</span><span class="desc">돈 to g</span></a><a class="cat-card" href="../../convert/g-to-don/index.html"><span class="name">그램 → 돈</span><span class="desc">g to 돈</span></a><a class="cat-card" href="../../convert/nyang-to-g/index.html"><span class="name">냥 → 그램</span><span class="desc">냥 to g</span></a><a class="cat-card" href="../../convert/kg-to-g/index.html"><span class="name">킬로그램 → 그램</span><span class="desc">kg to g</span></a><a class="cat-card" href="../../convert/g-to-kg/index.html"><span class="name">그램 → 킬로그램</span><span class="desc">g to kg</span></a></div>
+<aside class="promo" data-coupang>
+  <div class="coupang-wrap">
+    <a href="https://link.coupang.com/a/flCfhuxEJM" target="_blank" rel="sponsored noopener" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/1006097?trackingCode=AF8748009&subId=&traceId=V0-301-879dd1202e5c73b2-I1006097&w=728&h=90" alt="쿠팡 파트너스 배너" style="max-width:100%;height:auto" loading="lazy"></a>
+  </div>
+  <p class="promo-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+</aside>
+<script>
+  // 광고 미표시(차단기 등) 시 빈 카드 숨김
+  setTimeout(function () {
+    document.querySelectorAll('[data-coupang]').forEach(function (el) {
+      var f = el.querySelector('iframe');
+      var m = el.querySelector('img');
+      var ok = (f && f.getBoundingClientRect().height >= 10) || (m && m.complete && m.naturalWidth > 0);
+      if (!ok) el.hidden = true;
+    });
+  }, 4000);
+</script>
 </main>
 
 <footer class="footer">

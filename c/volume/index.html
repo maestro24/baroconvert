@@ -38,6 +38,23 @@
   <p class="page-desc">레시피 계량 — 컵·큰술·갤런·리터</p>
 </div>
 <div class="cat-grid"><a class="cat-card" href="../../convert/gal-to-l/index.html"><span class="name">갤런 → 리터</span><span class="desc">gal to L</span></a><a class="cat-card" href="../../convert/l-to-gal/index.html"><span class="name">리터 → 갤런</span><span class="desc">L to gal</span></a><a class="cat-card" href="../../convert/cup-to-ml/index.html"><span class="name">컵 → 밀리리터</span><span class="desc">컵 to mL</span></a><a class="cat-card" href="../../convert/ml-to-cup/index.html"><span class="name">밀리리터 → 컵</span><span class="desc">mL to 컵</span></a><a class="cat-card" href="../../convert/tbsp-to-ml/index.html"><span class="name">큰술 → 밀리리터</span><span class="desc">큰술 to mL</span></a><a class="cat-card" href="../../convert/ml-to-tbsp/index.html"><span class="name">밀리리터 → 큰술</span><span class="desc">mL to 큰술</span></a><a class="cat-card" href="../../convert/tsp-to-ml/index.html"><span class="name">작은술 → 밀리리터</span><span class="desc">작은술 to mL</span></a><a class="cat-card" href="../../convert/ml-to-tsp/index.html"><span class="name">밀리리터 → 작은술</span><span class="desc">mL to 작은술</span></a><a class="cat-card" href="../../convert/floz-to-ml/index.html"><span class="name">액량온스 → 밀리리터</span><span class="desc">fl oz to mL</span></a><a class="cat-card" href="../../convert/ml-to-floz/index.html"><span class="name">밀리리터 → 액량온스</span><span class="desc">mL to fl oz</span></a></div>
+<aside class="promo" data-coupang>
+  <div class="coupang-wrap">
+    <a href="https://link.coupang.com/a/flCfhuxEJM" target="_blank" rel="sponsored noopener" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/1006097?trackingCode=AF8748009&subId=&traceId=V0-301-879dd1202e5c73b2-I1006097&w=728&h=90" alt="쿠팡 파트너스 배너" style="max-width:100%;height:auto" loading="lazy"></a>
+  </div>
+  <p class="promo-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+</aside>
+<script>
+  // 광고 미표시(차단기 등) 시 빈 카드 숨김
+  setTimeout(function () {
+    document.querySelectorAll('[data-coupang]').forEach(function (el) {
+      var f = el.querySelector('iframe');
+      var m = el.querySelector('img');
+      var ok = (f && f.getBoundingClientRect().height >= 10) || (m && m.complete && m.naturalWidth > 0);
+      if (!ok) el.hidden = true;
+    });
+  }, 4000);
+</script>
 </main>
 
 <footer class="footer">

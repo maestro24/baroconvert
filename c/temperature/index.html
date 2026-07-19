@@ -38,6 +38,23 @@
   <p class="page-desc">해외 날씨, 오븐 온도 — 화씨·섭씨</p>
 </div>
 <div class="cat-grid"><a class="cat-card" href="../../convert/f-to-c/index.html"><span class="name">화씨 → 섭씨</span><span class="desc">°F to °C</span></a><a class="cat-card" href="../../convert/c-to-f/index.html"><span class="name">섭씨 → 화씨</span><span class="desc">°C to °F</span></a><a class="cat-card" href="../../convert/c-to-k/index.html"><span class="name">섭씨 → 켈빈</span><span class="desc">°C to K</span></a></div>
+<aside class="promo" data-coupang>
+  <div class="coupang-wrap">
+    <a href="https://link.coupang.com/a/flCfhuxEJM" target="_blank" rel="sponsored noopener" referrerpolicy="unsafe-url"><img src="https://ads-partners.coupang.com/banners/1006097?trackingCode=AF8748009&subId=&traceId=V0-301-879dd1202e5c73b2-I1006097&w=728&h=90" alt="쿠팡 파트너스 배너" style="max-width:100%;height:auto" loading="lazy"></a>
+  </div>
+  <p class="promo-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+</aside>
+<script>
+  // 광고 미표시(차단기 등) 시 빈 카드 숨김
+  setTimeout(function () {
+    document.querySelectorAll('[data-coupang]').forEach(function (el) {
+      var f = el.querySelector('iframe');
+      var m = el.querySelector('img');
+      var ok = (f && f.getBoundingClientRect().height >= 10) || (m && m.complete && m.naturalWidth > 0);
+      if (!ok) el.hidden = true;
+    });
+  }, 4000);
+</script>
 </main>
 
 <footer class="footer">
